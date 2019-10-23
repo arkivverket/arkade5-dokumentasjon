@@ -19,7 +19,11 @@ Pressemelding
 
 .. image:: img/arkade5-frontpage-screenshot.png
 
-Arkade vil etter hvert erstatte alle de testverktøy som Arkivverket har for å teste kvalitet av datasett generert fra arkivsystemer. Et viktig poeng er at Arkade kan teste så å si **alle** aktuelle varianter av arkivuttrekk, Noark standarder 3, 4 og 5 - pluss såkalte fagsystemer. 
+Arkade vil etter hvert erstatte alle de testverktøy som Arkivverket har for å teste kvalitet av datasett generert fra arkivsystemer. Et viktig poeng er at Arkade kan teste så å si alle aktuelle varianter av arkivuttrekk. I dag støtter Arkade 5 følgende:
+
+* Fagsystemer
+* Noark-3
+* Noark 5 versjon 3.1, 4.0 og 5.0
 
 Arkade tester arkivuttrekk, produserer testrapporter og "pakker inn" data basert på gjeldende arkivstandarder for metadata. Testing av data baserer seg primært på Arkivverkets standard `ADDML <https://www.arkivverket.no/forvaltning-og-utvikling/regelverk-og-standarder/andre-arkivstandarder/addml-archival-data-description-markup-language>`_ for beskrivelse av datastrukturer. 
 
