@@ -15,7 +15,7 @@ For å kjøre Arkade 5 må .NET Framework (minimum versjon 4.7.2) være installe
 
 .. |dotnet_framework_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download/dotnet-framework-runtime" target="_blank">Last ned siste versjon av .NET Framework</a>
+   <a href="https://dotnet.microsoft.com/download" target="_blank">Last ned siste versjon av .NET Framework runtime</a>
 
 
 Installer Arkade 5 
