@@ -11,10 +11,6 @@ Arkade 5 - testverktøy for arkivuttrekk
 .. |Installer Arkade 5| replace:: **Installer Arkade 5**
 .. _Installer Arkade 5: Installasjonsveiledning.html
 
-
-Pressemelding
-~~~~~~~~~~~~~
-
 4. september 2017 lanserte `Arkivverket <https://www.arkivverket.no>`_ versjon 1.0 av et nytt testverktøy - "Arkade 5".
 
 .. image:: img/arkade5-frontpage-screenshot.png
