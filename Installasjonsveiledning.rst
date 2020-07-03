@@ -21,7 +21,9 @@ For å kjøre Arkade 5 må .NET Framework (minimum versjon 4.7.2) være installe
 Installer Arkade 5 
 ~~~~~~~~~~~~~~~~~~
 
-`Last ned siste versjon av Arkade 5 <https://github.com/arkivverket/arkade5/releases/latest>`_ - Velg filen Arkade5-<versjon>.msi
+`Last ned siste versjon av Arkade 5 <http://arkade.arkivverket.no/>`_ - trykk på knappen:
+
+.. image:: img/DownloadGUIbutton.png
 
 Start installasjonen ved å dobbeltklikke den nedlastede msi-filen.
 
@@ -66,9 +68,6 @@ Arkade 5 CLI
 **Frittstående kommandolinjegrensesnitt for Linux, macOS og Windows**
 
 
-*NB! Ved installasjon av Arkade 5 for Windows (beskrevet over) medfølger Arkade 5 CLI som filen Arkade.exe i installasjonskatalogen. På Windows behøver man ikke å følge anvisningene nedenfor med mindre man ønsker å innstallere Arkade 5 CLI som en frittstående applikasjon.*
-
-
 Installer .NET Core
 ~~~~~~~~~~~~~~~~~~~
 
@@ -84,7 +83,9 @@ For å kjøre Arkade 5 CLI må .NET Core (minimum versjon 3.0) være installert.
 Installer Arkade 5 CLI
 ~~~~~~~~~~~~~~~~~~~~~~
 
-`Last ned siste versjon av Arkade 5 CLI <https://github.com/arkivverket/arkade5/releases/latest>`_ - Velg filen Arkade5CLI-<versjon>.zip
+`Last ned siste versjon av Arkade 5 CLI <http://arkade.arkivverket.no/>`_ - trykk på knappen:
+
+.. image:: img/DownloadCLIbutton.png
 
 Pakk ut den nedlastede zip-filen til der Arkade ønskes kjørt fra.
 
