@@ -129,15 +129,13 @@ Arkade 5 CLI tester og/eller lager en arkivpakke av et arkivuttrekk. Hva slags t
 Kjøring
 ~~~~~~~
 
-Arkade CLI kjøres med skriptet :code:`arkade.sh` som medfølger installasjonspakken.
+Dersom instruksjonene i installasjonsveiledningen for ditt operativsystem følges (`Linux/Mac <Installasjonsveiledning.html#linux-mac>`_, `Windows <Installasjonsveiledning.html#windows>`_) vil Arkade 5 CLI være kjørbart med :code:`arkade <kommando> [parametere]` fra hvor som helst i filsystemet. 
 
-For å kjøre skriptet slik som vist i eksemplene (:code:`./arkade.sh`), naviger til installasjonskatalogen:
+(*Dersom man lar være å følge* `stegene som beskriver hvordan Arkade 5 CLI tilgjengeliggjøres fra hvor som helst i filsystemet <Installasjonsveiledning.html#tilgjengeliggjor-arkade-fra-hvor-som-helst-i-filsystemet>`_ *må man i Linux/Mac kjøre arkade med* :code:`./arkade.sh`.)
 
-.. code-block:: bash
+**Videre eksempler er gitt med utgangspunkt i at ovennevnte veiledning er fulgt.**
 
-	cd Arkade5CLI-<versjon>
 
-*(Ved å tilgjengeliggjøre skriptet i PATH kan det kjøres med* :code:`arkade` *fra hvor som helst i filsystemet)*
 
 Kommandoer
 ----------
@@ -148,7 +146,7 @@ For en oversikt over tilgjengelige kommandoer og de tilhørende parametrene, bru
 
 .. code-block:: bash
 
-	./arkade.sh help
+	arkade help
 
 .. image:: img/cli/commands.png
 
@@ -159,7 +157,7 @@ Bruk :code:`--help`, etter en kommando for å vise eksempler på bruksmåte og e
 
 .. code-block:: bash
 
-	./arkade.sh generate --help
+	arkade generate --help
 
 .. image:: img/cli/generateParameters.png
 
@@ -193,7 +191,7 @@ Under vises et eksempel på hvordan kommandoen :command:`process` brukes. Det le
 
 .. code-block:: bash
 
-	./arkade.sh process -a ~/N5-arkivuttrekk/ -t noark5 -m ~/metadata.json -p ~/tmp/ -o ~/output/
+	arkade process -a ~/N5-arkivuttrekk/ -t noark5 -m ~/metadata.json -p ~/tmp/ -o ~/output/
 
 *Obligatoriske parametre ved arkivprosessering:*
 :code:`--archive`:code:`--type`:code:`--metadata-file`:code:`--processing-area`:code:`--output-directory`
@@ -210,7 +208,7 @@ Test om arkivuttrekk er i henhold til en spesifisert standard. Påkrevde paramet
 
 .. code-block:: bash
 
-	./arkade.sh test -a ~/N5-arkivuttrekk/ -t noark5 -p ~/tmp/ -o ~/output/ -l ~/n5-testlist.txt
+	arkade test -a ~/N5-arkivuttrekk/ -t noark5 -p ~/tmp/ -o ~/output/ -l ~/n5-testlist.txt
 
 :command:`pack` - Pakking av arkivuttrekk
 ...........
@@ -218,7 +216,7 @@ Lag en arkivpakke. På krevde parametre er :code:`--archive`, :code:`--type`, :c
 
 .. code-block:: bash
 
-	./arkade.sh pack -a ~/N5-arkivuttrekk/ -t noark5 -m ~/tmp/metadata.json -p ~/tmp/ -o ~/output/ -f
+	arkade pack -a ~/N5-arkivuttrekk/ -t noark5 -m ~/tmp/metadata.json -p ~/tmp/ -o ~/output/ -f
 
 :command:`generate` - Lag en eksempelfil
 ...................
@@ -227,7 +225,7 @@ Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som
 
 .. code-block:: bash
 
-	./arkade.sh generate -o ~/output/ -m -n
+	arkade generate -o ~/output/ -m -n
 
 | *Obligatoriske parametre ved filgenerering:*
 | :code:`--metadata-example`/:code:`-m` *eller* :code:`--noark5-test-list`/:code:`-n`
