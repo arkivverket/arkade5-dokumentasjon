@@ -131,7 +131,7 @@ Kjøring
 
 Dersom instruksjonene i installasjonsveiledningen for ditt operativsystem følges (`Linux/Mac <Installasjonsveiledning.html#linux-mac>`_, `Windows <Installasjonsveiledning.html#windows>`_) vil Arkade 5 CLI være kjørbart med :code:`arkade <kommando> [parametere]` fra hvor som helst i filsystemet. 
 
-(*Dersom man lar være å følge* `stegene som beskriver hvordan Arkade 5 CLI tilgjengeliggjøres fra hvor som helst i filsystemet <Installasjonsveiledning.html#tilgjengeliggjor-arkade-fra-hvor-som-helst-i-filsystemet>`_ *må man i Linux/Mac kjøre arkade med* :code:`./arkade.sh`.)
+(*Dersom man ikke følger* `stegene som beskriver hvordan Arkade 5 CLI tilgjengeliggjøres fra hvor som helst i filsystemet <Installasjonsveiledning.html#tilgjengeliggjor-arkade-fra-hvor-som-helst-i-filsystemet>`_ *må man i Linux/Mac kjøre arkade med* :code:`./arkade.sh`.)
 
 **Videre eksempler er gitt med utgangspunkt i at ovennevnte veiledning er fulgt.**
 
@@ -175,7 +175,7 @@ Under kjøring benytter Arkade et filområde til plassering av midlertidige file
 Eksempel på bruk
 ----------------
 
-Plasseringer og navn på kataloger for inn- og utdata er valgfrie. I eksemplene som følger brukes katalogene :code:`tmp/` og :code:`output/` i hjemmekatalogen :code:`~/`. Opprett de samme katalogene dersom du vil bruke eksempelkommandoene i denne veiledningen slik som de står.
+Plasseringer og navn på kataloger for inn- og utdata er valgfrie. I eksemplene som følger brukes katalogene :file:`tmp/` og :file:`output/` i hjemmekatalogen :file:`~/`. Opprett de samme katalogene dersom du vil bruke eksempelkommandoene i denne veiledningen slik som de står.
 
 .. code-block:: bash
 
@@ -187,55 +187,55 @@ Plasseringer og navn på kataloger for inn- og utdata er valgfrie. I eksemplene 
 
 *Arkivuttrekket som skal prosesseres kan foreligge som en ordinær mappestruktur eller en AIP/SIP-struktur pakket som en tar-fil. Parameterverdien for* :code:`--archive`/:code:`-a` *settes til hhv. katalogen som inneholder arkivbeskrivelse-filen (addml.xml, arkivuttrekk.xml eller NOARKIH.xml) eller til tar-filen.*
 
-Under vises et eksempel på hvordan kommandoen :command:`process` brukes. Det leses inn et arkivuttrekk fra katalogen :code:`~/N5-arkivuttrekk/`. Arkivuttrekkets type er oppgitt til :code:`noark5`. `Metadata <#generate-lag-en-eksempelfil>`_ for uttrekket leses fra filen :code:`~/metadata.json`. Katalog for plassering av prosesseringsområdet er satt til :code:`~/tmp/` og katalog for resulterende data er satt til :code:`~/output/`.
+Under vises et eksempel på hvordan kommandoen :command:`process` brukes. Det leses inn et arkivuttrekk fra katalogen :file:`~/N5-arkivuttrekk/`. Arkivuttrekkets type er oppgitt til :file:`noark5`. `Metadata <#generate-lag-en-eksempelfil>`_ for uttrekket leses fra filen :file:`~/output/arkade-ip-metadata.json`. Katalog for plassering av prosesseringsområdet er satt til :file:`~/tmp/` og katalog for resulterende data er satt til :file:`~/output/`.
 
 .. code-block:: bash
 
-	arkade process -a ~/N5-arkivuttrekk/ -t noark5 -m ~/metadata.json -p ~/tmp/ -o ~/output/
+	arkade process -a ~/N5-arkivuttrekk/ -t noark5 -m ~/output/arkade-ip-metadata.json -p ~/tmp/ -o ~/output/
 
-*Obligatoriske parametre ved arkivprosessering:*
-:code:`--archive`:code:`--type`:code:`--metadata-file`:code:`--processing-area`:code:`--output-directory`
+| *Obligatoriske parametre ved arkivprosessering:*
+| :code:`--archive`/:code:`-a`; :code:`--type`/:code:`-t`; :code:`--metadata-file`/:code:`-m`; :code:`--processing-area`/:code:`-p`; :code:`--output-directory`/:code:`-o`
 
 | *Valgbare parametre ved arkivprosessering:*
 | :code:`--information-package-type`/:code:`-i` - Standardverdi 'SIP'. Kan overstyres til 'AIP'.
-| :code:`--noark5-test-list`/:code:`-n` - Oppgi sti til en fil som inneholder en liste med tester skal kjøres.
+| :code:`--noark5-test-list`/:code:`-l` - Oppgi sti til en fil som inneholder en liste med tester skal kjøres.
 | :code:`--document-file-format-check`/:code:`-f` - Arkade utfører formatsjekk av dokumentfiler og lagrer resultatet i en csv-fil i tar-pakken.
 
 :command:`test` - Testing av arkivuttrekk
 ...........
 
-Test om arkivuttrekk er i henhold til en spesifisert standard. Påkrevde parametre er :code:`--archive`, :code:`--type`, :code:`--processing-area` og :code:`--output-directory`. Dersom det kun skal kjøres et utvalg av tester må en tekstfil som inneholder en liste over disse oppgis med parameteret :code:`--noark5-test-list`. Arkade CLI kan `lage en fil med et eksempel på en liste over tester <#generate-lag-en-eksempelfil>`_.
+Test om arkivuttrekk er i henhold til en spesifisert standard. Påkrevde parametre er :code:`--archive`/:code:`-a`, :code:`--type`/:code:`-t`, :code:`--processing-area`/:code:`-p` og :code:`--output-directory`/:code:`-o`. Dersom det kun skal kjøres et utvalg av tester må en tekstfil som inneholder en liste over disse oppgis med parameteret :code:`--noark5-test-list`/:code:`-l`. Arkade CLI kan `lage en fil med et eksempel på en liste over tester <#generate-lag-en-eksempelfil>`_.
 
 .. code-block:: bash
 
-	arkade test -a ~/N5-arkivuttrekk/ -t noark5 -p ~/tmp/ -o ~/output/ -l ~/n5-testlist.txt
+	arkade test -a ~/N5-arkivuttrekk/ -t noark5 -p ~/tmp/ -o ~/output/ -l ~/output/n5-testlist.txt
 
 :command:`pack` - Pakking av arkivuttrekk
 ...........
-Lag en arkivpakke. På krevde parametre er :code:`--archive`, :code:`--type`, :code:`--metadata-file` :code:`--processing-area` og :code:`--output-directory`. Standard pakketype er SIP, dette kan endres ved å oppgi 'AIP' til parameteret :code:`--information-package-type`. Det kan også utføres en formatsjekk av filene ved å oppgi parameteret :code:`--document-file-format-check`.
+Lag en arkivpakke. Påkrevde parametre er :code:`--archive`/:code:`-a`, :code:`--type`/:code:`-t`, :code:`--metadata-file`/:code:`-m`, :code:`--processing-area`/:code:`-p` og :code:`--output-directory`/:code:`-o`. Standard pakketype er SIP, dette kan endres ved å oppgi 'AIP' til parameteret :code:`--information-package-type`/:code:`-i`. Det kan også utføres en formatsjekk av filene ved å oppgi parameteret :code:`--document-file-format-check`/:code:`-f`.
 
 .. code-block:: bash
 
-	arkade pack -a ~/N5-arkivuttrekk/ -t noark5 -m ~/tmp/metadata.json -p ~/tmp/ -o ~/output/ -f
+	arkade pack -a ~/N5-arkivuttrekk/ -t noark5 -m ~/output/arkade-ip-metadata.json -p ~/tmp/ -o ~/output/ -f
 
 :command:`generate` - Lag en eksempelfil
 ...................
 
-Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som er gitt til parameteret :code:`--output-directory`. Filene lagres med standardnavn :code:`arkade-ip-metadata.json` og :code:`noark5-testlist.txt`.
+Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som er gitt til parameteret :code:`--output-directory`/:code:`-o`. Filene lagres med standardnavn :file:`arkade-ip-metadata.json` og :file:`noark5-testlist.txt`.
 
 .. code-block:: bash
 
 	arkade generate -o ~/output/ -m -n
 
 | *Obligatoriske parametre ved filgenerering:*
-| :code:`--metadata-example`/:code:`-m` *eller* :code:`--noark5-test-list`/:code:`-n`
-| :code:`--output-directory`
+| :code:`--metadata-example`/:code:`-m` *eller* :code:`--noark5-test-list`/:code:`-n` (*minst én av parametrene må oppgis*)
+| :code:`--output-directory`/:code:`-o`
 
 
 Resulterende data
 .................
 
-:command:`process` og :command:`pack` kommandoene produserer en arkivpakke som en tar-fil, med tilhørende {uuid}.xml på METS-format, samlet i en katalog. Ved siden av katalogen plasseres en testrapport på HTML-format.
+:command:`process` og :command:`pack` kommandoene produserer en arkivpakke som en tar-fil, med tilhørende {uuid}.xml på METS-format, samlet i en katalog. :command:`process` produserer i tillegg en testrapport på HTML-format; denne plasseres ved siden av katalogen.
 
 .. image:: img/cli/generatedoutput.png
 
