@@ -94,6 +94,23 @@ Gjør deretter :file:`arkade.sh` kjørbar med følgende kommando:
 
 	chmod +x /opt/Arkade5CLI-2.x.x/arkade.sh
 
+Gjør `Siegfried <https://www.itforarchivists.com/siegfried/>`_ (bundlet programvare for PRONOM formatsjekking) kjørbar:
+
+.. code-block:: bash
+
+	chmod +x /opt/Arkade5CLI-2.x.x/Bundled/Siegfried/siegfried*
+
+**Merk: macOS brukere må i tillegg sikkerhetsklarere** :file:`siegfried_mac` **med følgende kommando\*:**
+
+.. code-block:: bash
+
+	sudo xattr -rd com.apple.quarantine /opt/Arkade5CLI-2.x.x/Bundled/Siegfried/siegfried_mac
+
+Informasjon om hva som skjer i kulissene kan blant annet leses `her <https://support.apple.com/en-us/HT202491>`_.
+
+*\*Det er ikke anbefalt å sikkerhetsklarere en hvilken som helst applikasjon. Bare dersom du er helt sikker på at applikasjonen er trygg bør den sikkerhetsklareres.*
+
+
 Tilgjengeliggjør :code:`arkade` fra hvor som helst i filsystemet
 ........................................................
 
