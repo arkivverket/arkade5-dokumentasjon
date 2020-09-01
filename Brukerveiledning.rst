@@ -150,6 +150,8 @@ For en oversikt over tilgjengelige kommandoer og de tilhørende parametrene, bru
 
 .. image:: img/cli/commands.png
 
+**NB!** *Arkade CLI er case sensitiv med hensyn til oppgitte kommandoer på alle platformer.*
+
 Parametre
 ---------
 
@@ -165,7 +167,8 @@ Alle parametre foruten :code:`--help` og :code:`--version` kan oppgis i kortform
 
 Parametrenes rekkefølge er likegyldig.
 
-*NB! Alle kataloger som oppgis som må eksistere på forhånd.*
+| **NB!** *Alle kataloger som oppgis som må eksistere på forhånd.*
+| **NB!!** *Arkade CLI er case sensitiv med hensyn til oppgitte parametere og argumenter på alle platformer.*
 
 Prosesseringsområde (CLI)
 -------------------------
