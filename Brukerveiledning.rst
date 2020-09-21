@@ -150,8 +150,6 @@ For en oversikt over tilgjengelige kommandoer og de tilhørende parametrene, bru
 
 .. image:: img/cli/commands.png
 
-**NB!** *Arkade CLI er case sensitiv med hensyn til oppgitte kommandoer på alle platformer.*
-
 Parametre
 ---------
 
@@ -167,8 +165,7 @@ Alle parametre foruten :code:`--help` og :code:`--version` kan oppgis i kortform
 
 Parametrenes rekkefølge er likegyldig.
 
-| **NB!** *Alle kataloger som oppgis som må eksistere på forhånd.*
-| **NB!!** *Arkade CLI er case sensitiv med hensyn til oppgitte parametere og argumenter på alle platformer.*
+| **NB!** *Alle kataloger som oppgis som må eksistere på forhånd. Kommandoer, parametere og argumenter er case-sensitive på alle platformer.*
 
 Prosesseringsområde (CLI)
 -------------------------
@@ -197,7 +194,9 @@ Under vises et eksempel på hvordan kommandoen :command:`process` brukes. Det le
 	arkade process -a ~/N5-arkivuttrekk/ -t noark5 -m ~/output/arkade-ip-metadata.json -p ~/tmp/ -o ~/output/
 
 | *Obligatoriske parametre ved arkivprosessering:*
-| :code:`--archive`/:code:`-a`; :code:`--type`/:code:`-t`; :code:`--metadata-file`/:code:`-m`; :code:`--processing-area`/:code:`-p`; :code:`--output-directory`/:code:`-o`
+| :code:`--archive` :code:`--type` :code:`--metadata-file` :code:`--processing-area` :code:`--output-directory`
+| Tilsvarende på kortform: :code:`-a` :code:`-t` :code:`-m` :code:`-p` :code:`-o`
+
 
 | *Valgbare parametre ved arkivprosessering:*
 | :code:`--information-package-type`/:code:`-i` - Standardverdi 'SIP'. Kan overstyres til 'AIP'.
