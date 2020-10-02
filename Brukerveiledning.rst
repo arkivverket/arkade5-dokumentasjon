@@ -14,13 +14,35 @@ Arkade 5 muliggjør også opprettelse/endring av metadata for arkivuttrekk.
 Oppstart/avslutning
 ~~~~~~~~~~~~~~~~~~~
 
-Ved oppstart av Arkade åpnes innlastingsvinduet. Dersom et tilgjengelig område for midlertidige filer ikke allerede er definert, vil Arkade først be om at dette blir opppgitt (se innstillinger). Arkade avsluttes ved å lukke hovedvinduet. Ved avslutning igangsettes sletting av midlertidige filer.
+Ved oppstart av Arkade åpnes innlastingsvinduet. Dersom et tilgjengelig område for midlertidige filer ikke allerede er definert, vil Arkade først be om at dette blir oppgitt (se innstillinger - tannhjul i hjørnet oppe til høyre). Arkade avsluttes ved å lukke hovedvinduet. Ved avslutning igangsettes sletting av midlertidige filer.
 
 
 Innlastingsvinduet
 ~~~~~~~~~~~~~~~~~~
 
 .. image:: img/LoadArchiveWindow.png
+
+Menyvalg
+--------
+
+Øverst til høyre finnes fire menyvalg. 
+
+.. |menuItem_aboutArkade| image:: img/MenuItem_AboutArkade.png
+| |menuItem_aboutArkade| **- Om Arkade**
+| Åpner et nytt vindu med informasjon om Arkade 5.
+
+.. |menuItem_settings| image:: img/MenuItem_Settings.png
+| |menuItem_settings| **- Innstillinger**
+| Åpner et nytt vindu med innstillinger brukeren kan tilpasse. Arkade sitt prosesseringsområde endres herfra. Det er i tillegg mulig å velge mellom mørk og lys modus.
+
+.. |menuItem_webPage| image:: img/MenuItem_WebPage.png
+| |menuItem_webPage| **- Hjemmeside**
+| Åpner hjemmesiden til Arkade i din standard nettleser.
+
+.. |menuItem_tools| image:: img/MenuItem_Tools.png
+| |menuItem_tools| **- Verktøy**
+| Åpner et nytt vindu med tilleggsverktøy for Arkade. I gjeldende versjon er det eneste tilgjengelige tilleggsverktøyet PRONOM-filanalyse av en valgt katalog.
+
 
 Innlasting
 ----------
@@ -92,7 +114,7 @@ Før arkivpakke opprettes registreres aktuelle metadata. For å skape en gyldig 
 
 I nedre del av vinduet velges ønsket pakketype, SIP eller AIP.
 
-Dersom "Inkluder formatinformasjon for dokumentfiler" velges vil Arkade lage en csv-fil med forespurt informasjon og lagre denne på følgende lokasjon i tar-filen: :file:`\{uuid\\\}\\administrative_metadata\ `
+Dersom "Inkluder formatinformasjon for dokumentfiler" velges vil Arkade lage en csv-fil med forespurt informasjon og lagre denne på følgende lokasjon i tar-filen: :file:`\{uuid\\\}\\administrative_metadata\ `. (*Pakkeuavhengig formatanalyse av innholdet i en hvilken som helst katalog er tilgjengelig fra "verktøy"-menyvalget:* |menuItem_tools|).
 
 Når ønskede metadata er oppgitt, klikkes knappen "Opprett pakke". Dette åpner et dialogvindu for valg av pakkens plassering. Ved valgt plassering opprettes arkivpakken.
 
@@ -201,7 +223,7 @@ Under vises et eksempel på hvordan kommandoen :command:`process` brukes. Det le
 | *Valgbare parametre ved arkivprosessering:*
 | :code:`--information-package-type`/:code:`-i` - Standardverdi 'SIP'. Kan overstyres til 'AIP'.
 | :code:`--noark5-test-list`/:code:`-l` - Oppgi sti til en fil som inneholder en liste med tester skal kjøres.
-| :code:`--document-file-format-check`/:code:`-f` - Arkade utfører formatsjekk av dokumentfiler og lagrer resultatet i en csv-fil i tar-pakken.
+| :code:`--document-file-format-check`/:code:`-f` - Arkade utfører formatanalyse av dokumentfiler og lagrer resultatet i en csv-fil i tar-pakken.
 
 :command:`test` - Testing av arkivuttrekk
 ...........
@@ -214,7 +236,7 @@ Test om arkivuttrekk er i henhold til en spesifisert standard. Påkrevde paramet
 
 :command:`pack` - Pakking av arkivuttrekk
 ...........
-Lag en arkivpakke. Påkrevde parametre er :code:`--archive`/:code:`-a`, :code:`--type`/:code:`-t`, :code:`--metadata-file`/:code:`-m`, :code:`--processing-area`/:code:`-p` og :code:`--output-directory`/:code:`-o`. Standard pakketype er SIP, dette kan endres ved å oppgi 'AIP' til parameteret :code:`--information-package-type`/:code:`-i`. Det kan også utføres en formatsjekk av filene ved å oppgi parameteret :code:`--document-file-format-check`/:code:`-f`.
+Lag en arkivpakke. Påkrevde parametre er :code:`--archive`/:code:`-a`, :code:`--type`/:code:`-t`, :code:`--metadata-file`/:code:`-m`, :code:`--processing-area`/:code:`-p` og :code:`--output-directory`/:code:`-o`. Standard pakketype er SIP, dette kan endres ved å oppgi 'AIP' til parameteret :code:`--information-package-type`/:code:`-i`. Det kan også utføres en formatanalyse av filene ved å oppgi parameteret :code:`--document-file-format-check`/:code:`-f`.
 
 .. code-block:: bash
 
@@ -231,6 +253,19 @@ Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som
 
 | *Obligatoriske parametre ved filgenerering:*
 | :code:`--metadata-example`/:code:`-m` *eller* :code:`--noark5-test-list`/:code:`-n` (*minst én av parametrene må oppgis*)
+| :code:`--output-directory`/:code:`-o`
+
+:command:`analyse` - Utfør analyse
+...................
+
+Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen som er gitt til parameteret :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i filen :file:`documentfile-formatinfo.csv`, som plasseres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`.
+
+.. code-block:: bash
+
+	arkade analyse -f ~/directory -o ~/output/
+
+| *Obligatoriske parametre ved analyse:*
+| :code:`--format-analysis`/:code:`-f`
 | :code:`--output-directory`/:code:`-o`
 
 
