@@ -24,60 +24,65 @@ These functions are exposed in the API and the graphical user interface project 
 Below is a brief description of each project in the solution. 
 
 
-Arkivverket.Arkade
-------------------
+Arkivverket.Arkade.CLI
+-----------------------
+This project provides a cross-platform command line interface for the Arkade 5 software. It is built on the .NET Core framework, and based on the CommandLineParser and Serilog NuGet packages.
+
+Arkivverket.Arkade.CLI.Tests
+-----------------------
+This project contains the unit tests and other tests classes for the CLI project. Unit tests are created with xUnit. 
+
+Arkivverket.Arkade.Core
+-----------------------
 This is the core library with functions for testing archive extractions, generating reports and creating SIP/AIP-packages.
 
 The most notable classes in the core project are the test engines, package creator and report generator:
 
-* Arkivverket.Arkade.Core.Noark5.Noark5TestEngine
-* Arkivverket.Arkade.Core.Addml.AddmlDatasetTestEngine
-* Arkivverket.Arkade.Core.InformationPackageCreator
-* Arkivverket.Arkade.Report.HtmlReportGenerator
+* Arkivverket.Arkade.Core.Base.Noark5.Noark5TestEngine
+* Arkivverket.Arkade.Core.Base.Addml.AddmlDatasetTestEngine
+* Arkivverket.Arkade.Core.Base.InformationPackageCreator
+* Arkivverket.Arkade.Core.Report.HtmlReportGenerator
 
 A short description of the packages in the core project:
 
-**Core** - Domain classes
+**Base** - Domain classes
+
+**Bundled** - Software which Arkade bundles
 
 **ExternalModels** - Classes generated from xml schemas
 
 **Identify** - Identification classes for reading and identifying an archive extraction
 
-**Logging** - Classes related to logging of events during testing
+**Logging** - Classes related to logging of events during testing of archive
 
 **Metadata** - Contains classes related to creating metadata files for archive extractions
 
-**Report** - Classes for generating test reports
+**Report** - Classes for generating reports
 
 **Resource** - Various resource files, language files, images etc.
 
-**Tests** - Contains test classes for testing archive extractions
+**Testing** - Contains test classes for testing archive extractions
 
 **Util** - General utilities
 
+Arkivverket.Arkade.Core.Tests
+-----------------------
+This project contains the unit tests and other tests classes for the Core project. Unit tests are created with xUnit. 
 
-Arkivverket.Arkade.UI
----------------------
+Arkivverket.Arkade.GUI
+----------------------
 
 This project provides the graphical user interface of the Arkade 5 software. It is based on WPF, Windows Presentation Foundation. 
-Together with WPF, the application uses the Prism_ library for creating a loosly coupled, maintainable and testable XAML application.  
+Together with WPF, the application uses the Prism_ library (.Core, .Unity and .Wpf NuGet Packages) for creating a loosly coupled, maintainable and testable XAML application.
 
-Autofac_ is used as a dependency framework. Bootstrapping of the applications happens in **Bootstrapper.cs**. It is based on the bootstrapper provided by Prism and it loads the Autofac-module provided by the Arkade core library. 
-
-The design and layout is based on Google's Material_ Design. This has been implemented with the help of the `MaterialDesignThemes-library <http://materialdesigninxaml.net/>`_. Note that the user interface is only inspired by the material design, not neccessary strictly following it in every situation. 
-
+The design and layout is based on Google's Material_ Design. This has been implemented with the help of the `MaterialDesignThemes-library <http://materialdesigninxaml.net/>`_. Note that the user interface is only inspired by the material design, not neccessary strictly following it in every situation.
 
 .. _Prism: https://github.com/PrismLibrary/Prism
-.. _Autofac: https://autofac.org
 .. _Material: https://material.google.com/
-
-Arkivverket.Arkade.Test
------------------------
-This project contains the unit tests and other tests classes for the project. Unit tests are created with xUnit. 
 
 Setup
 -----
-This is the setup project for creating installation binaries. You need the `Wix-toolset <http://wixtoolset.org/>`_ to be able to use the Setup-project. 
+This is the setup project for creating installation binaries. The `Wix-toolset <http://wixtoolset.org/>`_ is needed to be able to use the Setup-project. 
 
 Signing the installation file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -88,44 +93,26 @@ Signing of the installation file is done by the continuous integration server. S
 
     "C:\Program Files (x86)\Windows Kits\8.1\bin\x64\signtool.exe" sign /f PATH_TO_CERTIFICATE_FILE.pfx /p CERTIFICATE_PASSWORD src\Setup\bin\Release\Setup.msi
 
-Sample.ConsoleApp
-------------------------------
-This is a sample application, which demonstrates the use of the Arkade API.
-
 Porting to other platforms
 --------------------------
-For now the application is only developed for use on the Microsoft Windows platform. However, with the new `.Net Core project <https://www.microsoft.com/net/core/platform>`_ from Microsoft, a cross platform application should be possible when the framework and tools has matured. The .Net Core platform allows running .net applications on linux and mac in addition to windows. 
+The graphical user interface can be a challenge to port, currently Microsoft has no plans for porting the Windows Presentation Framework to other platforms. There exists some third party packages for creating cross platform GUIs with .NET. AvaloniaUI_ seems to be the one most freqently mentioned.
 
-The Arkade project has few external dependencies and it should be possible to either update them to newer versions when they are compatible with .net core or replace them with other compatible libraries. Currently there are only three external libraries in use: 
-
-* `SharpZipLib <https://icsharpcode.github.io/SharpZipLib/>`_
-* Autofac_
-* `Serilog <https://serilog.net/>`_
-
-In addition there are some of the .net packages that has been restructured, deprecated or removed that need to be fixed before the application is fully cross platform compatible.
-
-The graphical user interface can be a challenge to port, currently Microsoft has no plans for porting the Windows Presentation Framework to other platforms. This means that for creating a linux desktop app, you might have to recreate the user interface with another graphics library. Preferably a library that works on both linux and mac.
-
-Some useful links regarding porting to .net core: 
-* https://blogs.msdn.microsoft.com/dotnet/2016/02/10/porting-to-net-core/
-* https://marketplace.visualstudio.com/items?itemName=ConnieYau.NETPortabilityAnalyzer
-
+.. _AvaloniaUI: https://avaloniaui.net/
 
 Arkade API
 ==========
 
-The Arkade project provides API-classes for simplified use of the core functionality. There are two API-classes included: Arkade.cs and ArkadeApi.cs. They are located inside the namespace **Arkivverket.Arkade.Core**. Both classes provides the same functionality, the difference is that Autofac_ is used for dependency injection in the Arkade class. The ArkadeApi class must be instantiated manually. There is an Autofac module that can be used, **Arkivverket.Arkade.Util.ArkadeAutofacModule**, if the client software already is using Autofac for dependency injection. 
+The Arkade project provides API-classes for simplified use of the core functionality. There are two API-classes included: Arkade.cs and ArkadeApi.cs. They are located inside the namespace **Arkivverket.Arkade.Core.Base**. Both classes provides the same functionality, the difference is that Autofac_ is used for dependency injection in the Arkade class. The ArkadeApi class must be instantiated manually. There is an Autofac module that can be used, **Arkivverket.Arkade.Core.Util.ArkadeAutofacModule**, if the client software already is using Autofac for dependency injection. 
 
 This is the signature of the Arkade API class:
 
 .. image:: img/api-signature.png
 
-There are two **RunTests** methods that runs for a given archive, either from a directory structure or a SIP/AIP package file (.tar). After the tests are run, the api returns a **TestSession**. The **TestSession** class contains all necessary information for creating a package with tests results or generating a report. 
+There are three **RunTests** methods that runs for a given archive, either from a directory structure, a SIP/AIP package file (.tar) or directly from a **TestSession**-object. After the tests are run, the former two **RunTests**-methods returns a **TestSession**. The **TestSession** class contains all necessary information for creating a package with tests results or generating a report. 
 
 A simple test run may look like this:
 
-.. code-block:: C
-
+.. code-block:: C#
    
    var arkade = new Arkade();
    var testSession = arkade.RunTests(ArchiveFile.Read("c:\\tmp\\ExampleArchive.tar", ArchiveType.Noark5));
@@ -133,9 +120,6 @@ A simple test run may look like this:
    arkade.CreatePackage(testSession, PackageType.SubmissionInformationPackage);
 
 The **TestSession** class contains various information about the testing that has been done. The TestSuite property contains a list of all tests that has been run and their results. 
-
-See the sample project (Sample.ConsoleApp) in the source code, for a complete example that runs testing on a Noark5 archive.
-
 
 ADDML
 =====
@@ -181,6 +165,7 @@ Arkade supports the NOARK5 standard.
 
 List of implemented Noark5 Tests:
 
+* N5.01 - Kontroll av at strukturfiler som er listet i arkivuttrekk.xml finnes i pakken
 * N5.02 - Kontroll av sjekk-summene for filene arkivuttrekk.xml og addml.xsd
 * N5.03 - Kontroll av sjekk-summene for XML-filene og XML-skjemaene i avleveringspakken
 * N5.04 - Antall arkiver i arkivstrukturen
@@ -232,3 +217,4 @@ List of implemented Noark5 Tests:
 * N5.60 - Start- og sluttdato i arkivuttrekket
 * N5.61 - Antall endringer i endringsloggen
 * N5.62 - Kontroll av referansene i endringsloggen
+* N5.63 - Kontroll av at XML-element inneholder en verdi
