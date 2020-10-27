@@ -125,7 +125,7 @@ Arkivpakken vil opprettes som en tar-fil og filnavnet vil være UUID-en som er g
 NB! Knappen "Ny kjøring" avslutter gjeldene arkivbehandling.
 
 
-Innstillinger
+Innstillinger |menuItem_settings|
 ~~~~~~~~~~~~~
 
 Prosesseringsområde
@@ -205,8 +205,7 @@ Plasseringer og navn på kataloger for inn- og utdata er valgfrie. I eksemplene 
 	mkdir ~/output
 
 :command:`process` - Prosessering av arkivuttrekk
-............................
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 *Arkivuttrekket som skal prosesseres kan foreligge som en ordinær mappestruktur eller en AIP/SIP-struktur pakket som en tar-fil. Parameterverdien for* :code:`--archive`/:code:`-a` *settes til hhv. katalogen som inneholder arkivbeskrivelse-filen (addml.xml, arkivuttrekk.xml eller NOARKIH.xml) eller til tar-filen.*
 
 Under vises et eksempel på hvordan kommandoen :command:`process` brukes. Det leses inn et arkivuttrekk fra katalogen :file:`~/N5-arkivuttrekk/`. Arkivuttrekkets type er oppgitt til :file:`noark5`. `Metadata <#generate-lag-en-eksempelfil>`_ for uttrekket leses fra filen :file:`~/output/arkade-ip-metadata.json`. Katalog for plassering av prosesseringsområdet er satt til :file:`~/tmp/` og katalog for resulterende data er satt til :file:`~/output/`.
@@ -226,8 +225,7 @@ Under vises et eksempel på hvordan kommandoen :command:`process` brukes. Det le
 | :code:`--document-file-format-check`/:code:`-f` - Arkade utfører formatanalyse av dokumentfiler og lagrer resultatet i en csv-fil i tar-pakken.
 
 :command:`test` - Testing av arkivuttrekk
-...........
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Test om arkivuttrekk er i henhold til en spesifisert standard. Påkrevde parametre er :code:`--archive`/:code:`-a`, :code:`--type`/:code:`-t`, :code:`--processing-area`/:code:`-p` og :code:`--output-directory`/:code:`-o`. Dersom det kun skal kjøres et utvalg av tester må en tekstfil som inneholder en liste over disse oppgis med parameteret :code:`--noark5-test-list`/:code:`-l`. Arkade CLI kan `lage en fil med et eksempel på en liste over tester <#generate-lag-en-eksempelfil>`_.
 
 .. code-block:: bash
@@ -235,7 +233,7 @@ Test om arkivuttrekk er i henhold til en spesifisert standard. Påkrevde paramet
 	arkade test -a ~/N5-arkivuttrekk/ -t noark5 -p ~/tmp/ -o ~/output/ -l ~/output/n5-testlist.txt
 
 :command:`pack` - Pakking av arkivuttrekk
-...........
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Lag en arkivpakke. Påkrevde parametre er :code:`--archive`/:code:`-a`, :code:`--type`/:code:`-t`, :code:`--metadata-file`/:code:`-m`, :code:`--processing-area`/:code:`-p` og :code:`--output-directory`/:code:`-o`. Standard pakketype er SIP, dette kan endres ved å oppgi 'AIP' til parameteret :code:`--information-package-type`/:code:`-i`. Det kan også utføres en formatanalyse av filene ved å oppgi parameteret :code:`--document-file-format-check`/:code:`-f`.
 
 .. code-block:: bash
@@ -243,8 +241,7 @@ Lag en arkivpakke. Påkrevde parametre er :code:`--archive`/:code:`-a`, :code:`-
 	arkade pack -a ~/N5-arkivuttrekk/ -t noark5 -m ~/output/arkade-ip-metadata.json -p ~/tmp/ -o ~/output/ -f
 
 :command:`generate` - Lag en eksempelfil
-...................
-
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som er gitt til parameteret :code:`--output-directory`/:code:`-o`. Filene lagres med standardnavn :file:`arkade-ip-metadata.json` og :file:`noark5-testlist.txt`.
 
 .. code-block:: bash
@@ -256,7 +253,7 @@ Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som
 | :code:`--output-directory`/:code:`-o`
 
 :command:`analyse` - Utfør analyse
-...................
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen som er gitt til parameteret :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i filen :file:`documentfile-formatinfo.csv`, som plasseres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`.
 
@@ -270,8 +267,7 @@ Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen so
 
 
 Resulterende data
-.................
-
+^^^^^^^^^^^^^^^^^
 :command:`process` og :command:`pack` kommandoene produserer en arkivpakke som en tar-fil, med tilhørende {uuid}.xml på METS-format, samlet i en katalog. :command:`process` produserer i tillegg en testrapport på HTML-format; denne plasseres ved siden av katalogen.
 
 .. image:: img/cli/generatedoutput.png
