@@ -104,6 +104,8 @@ Arkade API
 
 The Arkade project provides API-classes for simplified use of the core functionality. There are two API-classes included: Arkade.cs and ArkadeApi.cs. They are located inside the namespace **Arkivverket.Arkade.Core.Base**. Both classes provides the same functionality, the difference is that Autofac_ is used for dependency injection in the Arkade class. The ArkadeApi class must be instantiated manually. There is an Autofac module that can be used, **Arkivverket.Arkade.Core.Util.ArkadeAutofacModule**, if the client software already is using Autofac for dependency injection. 
 
+.. _Autofac: https://autofac.org/
+
 This is the signature of the Arkade API class:
 
 .. image:: img/api-signature.png
