@@ -192,7 +192,7 @@ Parametrenes rekkefølge er likegyldig.
 Prosesseringsområde (CLI)
 -------------------------
 
-Under kjøring benytter Arkade et filområde til plassering av midlertidige filer fra arkivprosessering, system- og feillogger samt andre systemfiler. Plassering for prosesseringsområdet velges av bruker som en katalog i filsystemet og må oppgis med parameteret :code:`--processing-area` eller :code:`-p`. Plasseringen som velges må være egnet med tanke på størrelse, lese-/skrivehastighet og personvern. Størrelsen må være minst den av uttrekket som skal behandles, i tillegg til noen MB for systemfiler. Etter en arkivprosessering vil Arkade igangsette sletting av midlertidige filer og gamle loggfiler. Av tekniske hensyn fjernes ikke automatisk mindre enn 1 uke gamle loggfiler. Vær oppmerksom på at loggfiler kan inneholde personopplysninger. Det anbefales å bruke den samme plasseringen for prosesseringsområdet for hver kjøring. Slik kan Arkade automatisk fjerne loggfiler som er mer enn 1 uke gamle. Sørg ellers for manuelt å fjerne loggfilene.
+Under kjøring benytter Arkade et filområde til plassering av midlertidige filer fra arkivprosessering, system- og feillogger samt andre systemfiler. Plassering for prosesseringsområdet velges av bruker som en katalog i filsystemet og må oppgis med parameteren :code:`--processing-area` eller :code:`-p`. Plasseringen som velges må være egnet med tanke på størrelse, lese-/skrivehastighet og personvern. Størrelsen må være minst den av uttrekket som skal behandles, i tillegg til noen MB for systemfiler. Etter en arkivprosessering vil Arkade igangsette sletting av midlertidige filer og gamle loggfiler. Av tekniske hensyn fjernes ikke automatisk mindre enn 1 uke gamle loggfiler. Vær oppmerksom på at loggfiler kan inneholde personopplysninger. Det anbefales å bruke den samme plasseringen for prosesseringsområdet for hver kjøring. Slik kan Arkade automatisk fjerne loggfiler som er mer enn 1 uke gamle. Sørg ellers for manuelt å fjerne loggfilene.
 
 Eksempel på bruk
 ----------------
@@ -242,7 +242,7 @@ Lag en arkivpakke. Påkrevde parametre er :code:`--archive`/:code:`-a`, :code:`-
 
 :command:`generate` - Lag en eksempelfil
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som er gitt til parameteret :code:`--output-directory`/:code:`-o`. Filene lagres med standardnavn :file:`arkade-ip-metadata.json` og :file:`noark5-testlist.txt`.
+Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som er gitt til parameteren :code:`--output-directory`/:code:`-o`. Filene lagres med standardnavn :file:`arkade-ip-metadata.json` og :file:`noark5-testlist.txt`.
 
 .. code-block:: bash
 
@@ -255,7 +255,7 @@ Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som
 :command:`analyse` - Utfør analyse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen som er gitt til parameteret :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i filen :file:`documentfile-formatinfo.csv`, som plasseres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`.
+Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen som er gitt til parameteren :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i filen :file:`documentfile-formatinfo.csv`, som plasseres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`.
 
 .. code-block:: bash
 
