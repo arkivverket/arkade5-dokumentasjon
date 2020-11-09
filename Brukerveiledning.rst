@@ -49,7 +49,7 @@ Innlasting
 
 Velg og last inn arkivuttrekket som skal behandles:
 
-1) Klikk på knappen "Velg katalog" dersom uttrekket er en ordinær fil-/mappestruktur. I tilfelle velges katalogen som inneholder arkivbeskrivelse-filen (addml.xml, arkivuttrekk.xml eller NOARKIH.xml). Klikk på knappen "Velg SIP/AIP-fil" dersom uttrekket er en AIP- eller SIP-struktur pakket som en tar-fil.
+1) Klikk på knappen "Velg katalog" dersom uttrekket er en ordinær fil-/mappestruktur. I tilfelle velges katalogen som inneholder arkivbeskrivelse-filen (addml.xml eller arkivuttrekk.xml). Klikk på knappen "Velg SIP/AIP-fil" dersom uttrekket er en AIP- eller SIP-struktur pakket som en tar-fil.
 
 2) Oppgi arkivtype for det valgte uttrekket. Arkade 5 støtter typene "Fagsystem", "Noark 3" og "Noark 5".
 
@@ -206,7 +206,7 @@ Plasseringer og navn på kataloger for inn- og utdata er valgfrie. I eksemplene 
 
 :command:`process` - Prosessering av arkivuttrekk
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-*Arkivuttrekket som skal prosesseres kan foreligge som en ordinær mappestruktur eller en AIP/SIP-struktur pakket som en tar-fil. Parameterverdien for* :code:`--archive`/:code:`-a` *settes til hhv. katalogen som inneholder arkivbeskrivelse-filen (addml.xml, arkivuttrekk.xml eller NOARKIH.xml) eller til tar-filen.*
+*Arkivuttrekket som skal prosesseres kan foreligge som en ordinær mappestruktur eller en AIP/SIP-struktur pakket som en tar-fil. Parameterverdien for* :code:`--archive`/:code:`-a` *settes til hhv. katalogen som inneholder arkivbeskrivelse-filen (addml.xml eller arkivuttrekk.xml) eller til tar-filen.*
 
 Under vises et eksempel på hvordan kommandoen :command:`process` brukes. Det leses inn et arkivuttrekk fra katalogen :file:`~/N5-arkivuttrekk/`. Arkivuttrekkets type er oppgitt til :file:`noark5`. `Metadata <#generate-lag-en-eksempelfil>`_ for uttrekket leses fra filen :file:`~/output/arkade-ip-metadata.json`. Katalog for plassering av prosesseringsområdet er satt til :file:`~/tmp/` og katalog for resulterende data er satt til :file:`~/output/`.
 
