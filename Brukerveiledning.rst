@@ -278,7 +278,7 @@ Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som
 :command:`analyse` - Utfør analyse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen som er gitt til parameteren :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i filen :file:`documentfile-formatinfo.csv`, som plasseres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`.
+Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen som er gitt til parameteren :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i filen :file:`fileformatinfo.csv`, som plasseres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`.
 
 .. code-block:: bash
 
