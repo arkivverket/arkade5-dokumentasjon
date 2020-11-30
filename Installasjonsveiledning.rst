@@ -9,13 +9,17 @@ Arkade 5
 Installer .NET
 ~~~~~~~~~~~~~~
 
-For å kjøre Arkade 5 må .NET Framework (minimum versjon 4.7.2) være installert.
+For å kjøre Arkade 5 må .NET 5 Desktop Runtime være installert:
 
-|dotnet_framework_download_link|
+   * Last ned |dotnet_desktop_x64_download_link| eller |dotnet_desktop_x86_download_link|
 
-.. |dotnet_framework_download_link| raw:: html
+.. |dotnet_desktop_x64_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download" target="_blank">Last ned siste versjon av .NET Framework runtime</a>
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-5.0.0-windows-x64-installer" target="_blank">.NET 5 Desktop Runtime  <b>x64</b></a>
+
+.. |dotnet_desktop_x86_download_link| raw:: html
+
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-5.0.0-windows-x86-installer" target="_blank">.NET 5 Desktop Runtime <b>x86</b></a>
 
 
 Installer Arkade 5 
@@ -66,16 +70,38 @@ Arkade 5 CLI
 **Frittstående kommandolinjegrensesnitt for Linux, macOS og Windows**
 
 
-Installer .NET Core
-~~~~~~~~~~~~~~~~~~~
+Installer .NET
+~~~~~~~~~~~~~~
 
-For å kjøre Arkade 5 CLI må .NET Core (minimum versjon 3.0) være installert.
+For å kjøre Arkade 5 CLI må .NET 5 Runtime være installert.
 
-|dotnet_core_download_link|
+Med Ubuntu/Debian kan .NET 5 Runtime installeres med følgende kommando:
+    
+.. code-block:: bash
 
-.. |dotnet_core_download_link| raw:: html
+	sudo apt-get install -y dotnet-runtime-5.0
 
-   <a href="https://dotnet.microsoft.com/download" target="_blank">Last ned siste versjon av .NET Core runtime</a>
+* **Linux:** Se |dotnet_linux_instructions_link| for din Linux-distribusjon
+* **macOS:** Last ned |dotnet_macos_x64_download_link|
+* **Windows:** Last ned |dotnet_windows_x64_download_link| eller |dotnet_windows_x86_download_link|
+
+.NET 5 Runtime er inkludert i, og ikke nødvendig å installere i tillegg til, .NET 5 **Desktop** Runtime (som er krevet av Arkade 5 skrivebordsapplikasjon).
+
+.. |dotnet_linux_instructions_link| raw:: html
+
+   <a href="https://docs.microsoft.com/dotnet/core/install/linux-package-managers" target="_blank">installasjonsinstruksjoner</a>
+
+.. |dotnet_macos_x64_download_link| raw:: html
+
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-5.0.0-macos-x64-installer" target="_blank">.NET 5 Runtime <b>x64</b></a>
+
+.. |dotnet_windows_x64_download_link| raw:: html
+
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-5.0.0-windows-x64-installer" target="_blank">.NET 5 Runtime <b>x64</b></a>
+
+.. |dotnet_windows_x86_download_link| raw:: html
+
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-5.0.0-windows-x86-installer" target="_blank">.NET 5 Runtime <b>x86</b></a>
 
 
 Installer Arkade 5 CLI
