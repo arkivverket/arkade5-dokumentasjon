@@ -278,16 +278,18 @@ Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som
 :command:`analyse` - Utfør analyse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen som er gitt til parameteren :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i filen :file:`fileformatinfo.csv`, som plasseres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`.
+Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen som er gitt til parameteren :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i filen :file:`fileformatinfo.csv`, som plasseres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`. Standardnavnet på resultatfilen kan om ønskelig overstyres med parameteren :code:`--output-filename`/:code:`-O` (stor O).
 
 .. code-block:: bash
 
-	arkade analyse -f ~/directory -o ~/output/
+	arkade analyse -f ~/directory -o ~/output/ -O myResultFileName
 
 | *Obligatoriske parametre ved analyse:*
 | :code:`--format-analysis`/:code:`-f`
 | :code:`--output-directory`/:code:`-o`
 
+| *Valgbare parametre ved analyse:*
+| :code:`--output-filename`/:code:`-O` (stor O)
 
 Resulterende data
 ^^^^^^^^^^^^^^^^^
