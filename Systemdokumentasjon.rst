@@ -7,8 +7,6 @@ Multilingual support
 
 In version 2.3.0, multilingual support was added to Arkade 5. These are the supported languages in the latest version:
 
-Here's a grid table followed by a simple table:
-
 +--------------------+-------------------+
 | Language           | Value required by |
 |                    | CLI ``-l`` param  |
