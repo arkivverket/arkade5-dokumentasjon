@@ -58,7 +58,9 @@ Velg og last inn arkivuttrekket som skal behandles:
 
 1) Klikk på knappen "Velg katalog" dersom uttrekket er en ordinær fil-/mappestruktur. I tilfelle velges katalogen som inneholder arkivbeskrivelse-filen (addml.xml eller arkivuttrekk.xml). Klikk på knappen "Velg SIP/AIP-fil" dersom uttrekket er en AIP- eller SIP-struktur pakket som en tar-fil.
 
-2) Dersom Arkade ikke automatisk har klart å detektere arkivtypen, oppgi arkivtype for det valgte uttrekket. Arkade 5 støtter typene "Fagsystem", "Noark 3" og "Noark 5".
+2) Dersom Arkade ikke automatisk har klart å detektere arkivtypen, oppgi arkivtype for det valgte uttrekket. Arkade 5 støtter typene "**Fagsystem**", "**Noark 3**", "**Noark 5**" og "**Siard**".
+
+	a) Arkade støtter ikke testing av Siard-uttrekk.
 
 3) Klikk på knappen "Last inn uttrekk". Det valgte uttrekket vil lastes inn og åpnes i testvinduet.
 
@@ -121,7 +123,7 @@ Før arkivpakke opprettes registreres aktuelle metadata. For å skape en gyldig 
 
 I nedre del av vinduet velges ønsket pakketype, SIP eller AIP.
 
-Dersom "Inkluder formatinformasjon for dokumentfiler" velges vil Arkade lage en csv-fil med forespurt informasjon og lagre denne på følgende lokasjon i tar-filen: :file:`\{uuid\\\}\\administrative_metadata\ `. (*Pakkeuavhengig formatanalyse av innholdet i en hvilken som helst katalog er tilgjengelig fra "verktøy"-menyvalget:* |menuItem_tools|).
+Dersom "Inkluder formatinformasjon for dokumentfiler", eller "Inkluder formatinformasjon for LOBer" for Siard-uttrekk, velges vil Arkade lage en csv-fil med forespurt informasjon og lagre denne på følgende lokasjon i tar-filen: :file:`\{uuid\\\}\\administrative_metadata\ `. (*Pakkeuavhengig formatanalyse av innholdet i en hvilken som helst katalog er tilgjengelig fra "verktøy"-menyvalget:* |menuItem_tools|).
 
 Når ønskede metadata er oppgitt, klikkes knappen "Opprett pakke". Dette åpner et dialogvindu for valg av pakkens plassering. Ved valgt plassering opprettes arkivpakken.
 
