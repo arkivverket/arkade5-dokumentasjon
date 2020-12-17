@@ -17,15 +17,10 @@ Oppstart/avslutning
 Ved oppstart av Arkade åpnes innlastingsvinduet. Dersom et tilgjengelig område for midlertidige filer ikke allerede er definert, vil Arkade først be om at dette blir oppgitt (se innstillinger - tannhjul i hjørnet oppe til høyre). Arkade avsluttes ved å lukke hovedvinduet. Ved avslutning igangsettes sletting av midlertidige filer.
 
 
-Innlastingsvinduet
-~~~~~~~~~~~~~~~~~~
-
-.. image:: img/LoadArchiveWindow.png
-
 Menyvalg
---------
+~~~~~~~~
 
-Øverst til høyre finnes fire menyvalg. 
+Øverst til høyre finnes det til enhver tid fire menyvalg:
 
 .. |menuItem_aboutArkade| image:: img/MenuItem_AboutArkade.png
 | |menuItem_aboutArkade| **- Om Arkade**
@@ -42,6 +37,12 @@ Menyvalg
 .. |menuItem_tools| image:: img/MenuItem_Tools.png
 | |menuItem_tools| **- Verktøy**
 | Åpner et nytt vindu med tilleggsverktøy for Arkade. I gjeldende versjon er det eneste tilgjengelige tilleggsverktøyet PRONOM-filanalyse av en valgt katalog.
+
+
+Innlastingsvinduet
+~~~~~~~~~~~~~~~~~~
+
+.. image:: img/LoadArchiveWindow.png
 
 
 Innlasting
