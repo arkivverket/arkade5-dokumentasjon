@@ -28,11 +28,17 @@ Menyvalg
 
 .. |menuItem_settings| image:: img/MenuItem_Settings.png
 | |menuItem_settings| **- Innstillinger**
-| Åpner et nytt vindu med innstillinger brukeren kan tilpasse. Arkade sitt prosesseringsområde endres herfra. Det er i tillegg mulig å velge mellom mørk og lys modus.
+| Åpner et nytt vindu med innstillinger brukeren kan tilpasse:
+| 	- Arkade sitt prosesseringsområde.
+| 	- Språk i brukergrensesnitt (`Se systemdokumentasjon for støttede språk`_)
+| 	- Språk for utdata (`Se systemdokumentasjon for støttede språk`_)
+| 	- Mørk/lys modus.
+
+.. _Se systemdokumentasjon for støttede språk: Systemdokumentasjon.html#multilingual-support
 
 .. |menuItem_webPage| image:: img/MenuItem_WebPage.png
 | |menuItem_webPage| **- Hjemmeside**
-| Åpner hjemmesiden til Arkade i din standard nettleser.
+| Åpner hjemmesiden til Arkade i standard nettleser.
 
 .. |menuItem_tools| image:: img/MenuItem_Tools.png
 | |menuItem_tools| **- Verktøy**
@@ -192,7 +198,11 @@ Parametrenes rekkefølge er likegyldig.
 
 Arkivtype (:code:`--type`/:code:`-t`)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Dersom arkivuttrekket som oppgis til :code:`--archive`/:code:`-a` er gyldig i henhold til en av `standardene Arkade støtter <Brukerveiledning.html#innlasting>`_, kan Arkade automatisk detektere arkivtypen. 
+Dersom arkivuttrekket som oppgis til :code:`--archive`/:code:`-a` er gyldig i henhold til en av `standardene Arkade støtter <Brukerveiledning.html#innlasting>`_, kan Arkade automatisk detektere arkivtypen.
+
+Språk (:code:`--language`/:code:`-l`)
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Arkade CLI støtter fra og med versjon 2.3.0 valg av språk for utdata fra applikasjonen. `Se systemdokumentasjon for hvilke språk Arkade støtter <Systemdokumentasjon.html#multilingual-support>`_.
 
 Prosesseringsområde (CLI)
 -------------------------
@@ -227,7 +237,8 @@ Under vises et eksempel på hvordan kommandoen :command:`process` brukes. Det le
 | *Valgbare parametre ved arkivprosessering:*
 | :code:`--type`/:code:`-t` - Oppgi for å overstyre `detektert arkivtype <#arkivtype-type-t>`_.
 | :code:`--information-package-type`/:code:`-i` - Standardverdi 'SIP'. Kan overstyres til 'AIP'.
-| :code:`--noark5-test-list`/:code:`-l` - Oppgi sti til en fil som inneholder en liste med tester skal kjøres.
+| :code:`--language`/:code:`-l` - `Velg hvilket språk <#sprak-language-l>`_ filer som blir generert av Arkade skal ha.
+| :code:`--noark5-test-selection`/:code:`-s` - Oppgi sti til en fil som inneholder et utvalg av tester som skal kjøres.
 | :code:`--document-file-format-check`/:code:`-f` - Arkade utfører formatanalyse av dokumentfiler og lagrer resultatet i en csv-fil i tar-pakken.
 
 :command:`test` - Testing av arkivuttrekk
@@ -236,7 +247,7 @@ Test om et arkivuttrekk er i henhold til standard. Eksempel på bruk:
 
 .. code-block:: bash
 
-	arkade test -a ~/N5-arkivuttrekk/ -p ~/tmp/ -o ~/output/ -l ~/output/n5-testlist.txt
+	arkade test -a ~/N5-arkivuttrekk/ -p ~/tmp/ -o ~/output/ -s ~/output/n5-testlist.txt
 
 | *Obligatoriske parametre ved testing av arkivuttrekk:*
 | :code:`--archive` :code:`--processing-area` :code:`--output-directory`
@@ -244,7 +255,8 @@ Test om et arkivuttrekk er i henhold til standard. Eksempel på bruk:
 
 | *Valgbare parametre ved testing av arkivuttrekk:*
 | :code:`--type`/:code:`-t` - Oppgi for å overstyre `detektert arkivtype <#arkivtype-type-t>`_.
-| :code:`--noark5-test-list`/:code:`-l` - Oppgi sti til en fil som inneholder en liste med tester skal kjøres. Arkade CLI kan `lage en fil med et eksempel på en liste over tester <#generate-lag-en-eksempelfil>`_.
+| :code:`--language`/:code:`-l` - `Velg hvilket språk <#sprak-language-l>`_ filer som blir generert av Arkade skal ha.
+| :code:`--noark5-test-selection`/:code:`-s` - Oppgi sti til en fil som inneholder et utvalg av tester som skal kjøres. Arkade CLI kan `lage en fil med et eksempel på en liste over tester <#generate-lag-en-eksempelfil>`_.
 
 :command:`pack` - Pakking av arkivuttrekk
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -262,24 +274,28 @@ Lag en arkivpakke.
 | *Valgbare parametre ved pakking av arkivuttrekk:*
 | :code:`--type`/:code:`-t` - Oppgi for å overstyre `detektert arkivtype <#arkivtype-type-t>`_.
 | :code:`--information-package-type`/:code:`-i` - Standardverdi 'SIP'. Kan overstyres til 'AIP'.
+| :code:`--language`/:code:`-l` - `Velg hvilket språk <#sprak-language-l>`_ filer som blir generert av Arkade skal ha.
 | :code:`--document-file-format-check`/:code:`-f` - Arkade utfører formatanalyse av dokumentfiler og lagrer resultatet i en csv-fil i tar-pakken.
 
 :command:`generate` - Lag en eksempelfil
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Kommandoen under lager både en metadata-fil og en testliste-fil i katalogen som er gitt til parameteren :code:`--output-directory`/:code:`-o`. Filene lagres med standardnavn :file:`arkade-ip-metadata.json` og :file:`noark5-testlist.txt`.
+Kommandoen under lager både en metadata-fil og en testutvalg-fil i katalogen som er gitt til parameteren :code:`--output-directory`/:code:`-o`. Filene lagres med standardnavn avhengig av hvilket språk som er valgt. I eksempelet er det valgt norsk bokmål, standardnavn blir derfor :file:`arkade-ip-metadata.json` og :file:`noark5-testutvalg.txt`.
 
 .. code-block:: bash
 
-	arkade generate -o ~/output/ -m -n
+	arkade generate -o ~/output/ -m -s -l nb
 
 | *Obligatoriske parametre ved filgenerering:*
-| :code:`--metadata-example`/:code:`-m` *eller* :code:`--noark5-test-list`/:code:`-n` (*minst én av parametrene må oppgis*)
+| :code:`--metadata-example`/:code:`-m` *eller* :code:`--noark5-test-selection`/:code:`-s` (*minst én av parametrene må oppgis*)
 | :code:`--output-directory`/:code:`-o`
+
+| *Valgbare parametre ved filgenerering:*
+| :code:`--language`/:code:`-l` - `Velg hvilket språk <#sprak-language-l>`_ filer som blir generert av Arkade skal ha.
 
 :command:`analyse` - Utfør analyse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen som er gitt til parameteren :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i filen :file:`fileformatinfo.csv`, som plasseres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`. Standardnavnet på resultatfilen kan om ønskelig overstyres med parameteren :code:`--output-filename`/:code:`-O` (stor O).
+Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen som er gitt til parameteren :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`. Standardnavnet på resultatfilen kan om ønskelig overstyres med parameteren :code:`--output-filename`/:code:`-O` (stor O).
 
 .. code-block:: bash
 
@@ -291,6 +307,7 @@ Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen so
 
 | *Valgbare parametre ved analyse:*
 | :code:`--output-filename`/:code:`-O` (stor O)
+| :code:`--language`/:code:`-l` - `Velg hvilket språk <#sprak-language-l>`_ filer som blir generert av Arkade skal ha.
 
 Resulterende data
 ^^^^^^^^^^^^^^^^^
