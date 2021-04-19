@@ -197,7 +197,7 @@ List of implemented Noark5 Tests:
 
 * N5.01 - Kontroll av at strukturfiler som er listet i arkivuttrekk.xml finnes i pakken
 * N5.02 - Kontroll av sjekk-summene for filene arkivuttrekk.xml og addml.xsd
-* N5.03 - Kontroll av sjekk-summene for XML-filene og XML-skjemaene i avleveringspakken
+* N5.03 - Kontroll av at XML-filer er gyldige i henhold til tilhørende XML-skjema
 * N5.04 - Antall arkiver i arkivstrukturen
 * N5.05 - Antall arkivdeler i arkivstrukturen
 * N5.06 - Arkivdelen[e]s status i arkivstrukturen
