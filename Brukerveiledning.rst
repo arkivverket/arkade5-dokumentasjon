@@ -200,7 +200,7 @@ Parametrenes rekkefølge er likegyldig.
 
 Arkivtype (:code:`--type`/:code:`-t`)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Dersom arkivuttrekket som oppgis til :code:`--archive`/:code:`-a` er gyldig i henhold til en av `standardene Arkade støtter <Brukerveiledning.html#innlasting>`_, kan Arkade automatisk detektere arkivtypen.
+Dersom arkivuttrekket som oppgis til :code:`--archive`/:code:`-a` er gyldig i henhold til en av `standardene Arkade støtter <Brukerveiledning.html#innlasting>`_, kan Arkade automatisk detektere arkivtypen. Automatisk deteksjon av arkivtypen til et pakket arkiv (.tar-fil) forutsetter at infofilen er lokalisert ved siden av arkivfilen.
 
 Språk (:code:`--language`/:code:`-l`)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
