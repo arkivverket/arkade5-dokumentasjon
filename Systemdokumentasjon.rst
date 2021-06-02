@@ -137,6 +137,20 @@ A simple test run may look like this:
 
 The **TestSession** class contains various information about the testing that has been done. The TestSuite property contains a list of all tests that has been run and their results. 
 
+Test Report
+===========
+
+Arkade produces a report with test results in the following formats: HTML, PDF, JSON and XML.
+
+Schemas
+-------
+
+Schemas for JSON and XML reports are available from the below links:
+
+| **Arkade version 2.4.0**
+| :download:`testReport.schema.json <resources/testReport.schema.json>`
+| :download:`testReport.xsd <resources/testReport.xsd>`
+
 ADDML
 =====
 

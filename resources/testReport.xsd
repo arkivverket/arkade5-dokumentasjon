@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="TestReport" nillable="true" type="TestReport" />
+  <xs:complexType name="TestReport">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Summary" type="TestReportSummary" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TestsResults" type="ArrayOfExecutedTest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TestReportSummary">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Uuid" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="ArchiveType" type="ArchiveType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ArchiveCreators" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ArchivalPeriod" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SystemName" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="SystemType" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="DateOfTesting" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NumberOfProcessedFiles" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NumberOfProcessedRecords" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NumberOfTestsRun" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NumberOfErrors" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ArchiveType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Noark3" />
+      <xs:enumeration value="Noark5" />
+      <xs:enumeration value="Fagsystem" />
+      <xs:enumeration value="Siard" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ArrayOfExecutedTest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ExecutedTest" nillable="true" type="ExecutedTest" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExecutedTest">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="TestId" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TestName" type="xs:string" />
+      <xs:element minOccurs="1" maxOccurs="1" name="TestType" type="TestType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="TestDescription" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ResultSet" type="ResultSet" />
+      <xs:element minOccurs="1" maxOccurs="1" name="HasResults" type="xs:boolean" />
+      <xs:element minOccurs="0" maxOccurs="1" name="NumberOfErrors" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="TestType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="StructureAnalysis" />
+      <xs:enumeration value="StructureControl" />
+      <xs:enumeration value="ContentAnalysis" />
+      <xs:enumeration value="ContentControl" />
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ResultSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="Name" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="ResultSets" type="ArrayOfResultSet" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Results" type="ArrayOfResult" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfResultSet">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="ResultSet" nillable="true" type="ResultSet" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ArrayOfResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="Result" nillable="true" type="Result" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Result">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="ResultType" type="ResultType" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Location" type="xs:string" />
+      <xs:element minOccurs="0" maxOccurs="1" name="Message" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:simpleType name="ResultType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Success" />
+      <xs:enumeration value="Error" />
+      <xs:enumeration value="ErrorGroup" />
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

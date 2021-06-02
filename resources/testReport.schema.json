@@ -1,0 +1,161 @@
+{
+    "definitions":
+    {
+        "ExecutedTest":
+        {
+            "type": ["object", "null"],
+            "properties":
+            {
+                "TestId":
+                {
+                    "type": ["string", "null"]
+                },
+                "TestName":
+                {
+                    "type": ["string", "null"]
+                },
+                "TestType":
+                {
+                    "type": "string",
+                    "enum": ["StructureAnalysis", "StructureControl", "ContentAnalysis", "ContentControl"]
+                },
+                "TestDescription":
+                {
+                    "type": ["string", "null"]
+                },
+                "ResultSet":
+                {
+                    "$ref": "#/definitions/ResultSet"
+                },
+                "HasResults":
+                {
+                    "type": "boolean"
+                },
+                "NumberOfErrors":
+                {
+                    "type": ["string", "null"]
+                }
+            },
+            "required": ["TestId", "TestName", "TestType", "TestDescription", "ResultSet", "HasResults", "NumberOfErrors"]
+        },
+        "Result":
+        {
+            "type": ["object", "null"],
+            "properties":
+            {
+                "ResultType":
+                {
+                    "type": "string",
+                    "enum": ["Success", "Error", "ErrorGroup"]
+                },
+                "Location":
+                {
+                    "type": ["string", "null"]
+                },
+                "Message":
+                {
+                    "type": ["string", "null"]
+                }
+            },
+            "required": ["ResultType", "Location", "Message"]
+        },
+        "ResultSet":
+        {
+            "type": ["object", "null"],
+            "properties":
+            {
+                "Name":
+                {
+                    "type": ["string", "null"]
+                },
+                "ResultSets":
+                {
+                    "type": ["array", "null"],
+                    "items":
+                    {
+                        "$ref": "#/definitions/ResultSet"
+                    }
+                },
+                "Results":
+                {
+                    "type": ["array", "null"],
+                    "items":
+                    {
+                        "$ref": "#/definitions/Result"
+                    }
+                }
+            },
+            "required": ["Name", "ResultSets", "Results"]
+        },
+        "TestReportSummary":
+        {
+            "type": ["object", "null"],
+            "properties":
+            {
+                "Uuid":
+                {
+                    "type": ["string", "null"]
+                },
+                "ArchiveType":
+                {
+                    "type": "string",
+                    "enum": ["Noark3", "Noark5", "Fagsystem", "Siard"]
+                },
+                "ArchiveCreators":
+                {
+                    "type": ["string", "null"]
+                },
+                "ArchivalPeriod":
+                {
+                    "type": ["string", "null"]
+                },
+                "SystemName":
+                {
+                    "type": ["string", "null"]
+                },
+                "SystemType":
+                {
+                    "type": ["string", "null"]
+                },
+                "DateOfTesting":
+                {
+                    "type": ["string", "null"]
+                },
+                "NumberOfProcessedFiles":
+                {
+                    "type": ["string", "null"]
+                },
+                "NumberOfProcessedRecords":
+                {
+                    "type": ["string", "null"]
+                },
+                "NumberOfTestsRun":
+                {
+                    "type": ["string", "null"]
+                },
+                "NumberOfErrors":
+                {
+                    "type": ["string", "null"]
+                }
+            },
+            "required": ["Uuid", "ArchiveType", "ArchiveCreators", "ArchivalPeriod", "SystemName", "SystemType", "DateOfTesting", "NumberOfProcessedFiles", "NumberOfProcessedRecords", "NumberOfTestsRun", "NumberOfErrors"]
+        }
+    },
+    "type": "object",
+    "properties":
+    {
+        "Summary":
+        {
+            "$ref": "#/definitions/TestReportSummary"
+        },
+        "TestsResults":
+        {
+            "type": ["array", "null"],
+            "items":
+            {
+                "$ref": "#/definitions/ExecutedTest"
+            }
+        }
+    },
+    "required": ["Summary", "TestsResults"]
+}
