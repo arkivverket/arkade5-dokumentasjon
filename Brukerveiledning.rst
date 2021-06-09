@@ -92,7 +92,9 @@ Under testkjøring vil det, i den nedre delen av vinduet, vises meldinger om inn
 Testrapport
 -----------
 
-Etter fullført testing vil det genereres en rapport i HTML, XML, JSON og PDF-format. Klikk på knappen "Vis rapport" for å åpne HTML-versjonen i en nettleser (den vil tilpasse seg gjeldende skjermflate). Ved opprettelse av arkivpakke inkluderes alltid testrapporten i alle formater. Dersom rapporten (før pakking) skal tas vare på et annet sted, er den tilgjengelig fra lokasjonen som er spesifisert under meldingen "Lager rapport".
+Etter fullført testing vil det genereres en rapport i formatene HTML, PDF, XML og JSON. Klikk på knappen "Vis rapport" for å åpne HTML-versjonen i en nettleser eller eksportere en katalog med rapporten i alle formater.
+
+*(!) Ved opprettelse av arkivpakke inkluderes alltid testrapporten i alle formater.*
 
 .. image:: img/HtmlTestReport.png
 
