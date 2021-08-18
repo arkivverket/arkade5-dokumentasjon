@@ -144,6 +144,16 @@ Prosesseringsområde
 
 Under kjøring benytter Arkade et filområde til plassering av midlertidige filer fra arkivprosessering, system- og feillogger samt andre systemfiler. Plassering for prosesseringsområdet velges av bruker som en katalog i filsystemet og må være definert før arkiv kan behandles. Plasseringen som velges må være egnet med tanke på størrelse, tilgjengelighet og personvern. Størrelsen må være minst den av alle uttrekk som skal behandles under samme kjøring i tillegg til plass for systemfiler. Ved avslutning av Arkade igangsettes sletting av midlertidige filer og gamle loggfiler. Plasseringen av prosesseringsområdet kan når som helst endres fra innstillingsvinduet. Ved endring av plassering, igangsettes sletting av opprinnelig prosesseringsområde. Ny plassering vil tas i bruk neste gang Arkade startes.
 
+Språk
+-----
+
+Det er mulig å velge språk for både brukergrensesnitt og filer som blir produsert av Arkade. Det kan være nyttig å skille mellom disse for eksempel for en engelskspråklig bruker som skal levere rapporter på norsk. En oversikt over støttede språk finnes i `systemdokumentasjonen <Systemdokumentasjon.html#multilingual-support>`_
+
+Mørk modus
+----------
+
+Brukes for å aktivere eller deaktivere mørk modus for Arkade.
+
 __________________________________________________________________________
 
 
