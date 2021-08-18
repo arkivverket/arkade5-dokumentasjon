@@ -43,6 +43,30 @@ Den følgende advarselen vil vises om Windows-maskinen har "Windows Smart Screen
 **Følg installasjonsveiviseren og aksepter alle de foreslåtte installasjonsvalgene.**
 
 
+Aktiver støtte for validering av Siard-filer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_link| for validering av Siard-filer må følgende instruksjoner utføres:
+
+Installer Java Runtime Environment
+----------------------------------
+* Last ned installasjonsfil for Java Runtime Environment (JRE) fra |java_download_link|
+* Installer JRE ved å dobbeltklikke den nedlastede filen
+
+Tilgjengeligjør DBPTK Developer for Arkade
+------------------------------------------
+* Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
+* Lagre den nedlastede filen i samme katalog som den kjørbare arkade-filen.
+
+.. |database_preservation_toolkit_link| raw:: html
+
+   <a href="https://database-preservation.com/#developer" target="_blank">Database Preservation Toolkit Developer (DBPTK Developer)</a>
+
+.. |java_download_link| raw:: html
+
+   <a href="https://java.com/en/download/" target="_blank" >https://java.com/en/download/</a>
+
+
 Kjør programmet
 ~~~~~~~~~~~~~~~
 .. image:: img/RunTool.png
@@ -166,6 +190,21 @@ Tilgjengeliggjør :code:`arkade` fra hvor som helst i filsystemet
 
 	echo "C:\Programfiler\Arkade5CLI-2.x.x\arkade.bat" > C:\Windows\arkade.bat
 
+
+Aktiver støtte for validering av Siard-filer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_link| for validering av Siard-filer må følgende instruksjoner utføres:
+
+Installer Java Runtime Environment
+----------------------------------
+* Last ned installasjonsfil for Java Runtime Environment (JRE) fra |java_download_link|
+* Installer JRE ved å dobbeltklikke den nedlastede filen
+
+Tilgjengeligjør DBPTK Developer for Arkade
+------------------------------------------
+* Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
+* Lagre den nedlastede filen i samme katalog som den kjørbare arkade-filen.
 
 
 Kjør Arkade 5 CLI
