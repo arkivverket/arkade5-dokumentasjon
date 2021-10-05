@@ -129,9 +129,9 @@ Dersom "Inkluder formatinformasjon for dokumentfiler", eller "Inkluder formatinf
 
 Når ønskede metadata er oppgitt, klikkes knappen "Opprett pakke". Dette åpner et dialogvindu for valg av pakkens plassering. Ved valgt plassering opprettes arkivpakken.
 
-Arkivpakken vil opprettes som en tar-fil og filnavnet vil være UUID-en som er generert for den gjeldende arkivbehandlingen: *{uuid}.tar*. Pakken og tilhørende {uuid}.xml-fil plasseres i en katalog *Arkadepakke-{uuid}*. Når alt er ferdig generert, vises denne katalogen på den valgte plasseringen.
+Arkivpakken vil opprettes som en tar-fil og filnavnet vil være UUID-en som er generert for den gjeldende arkivbehandlingen: :file:`\{uuid\\\}.tar`. Pakken og tilhørende :file:`\{uuid\\\}.xml`-fil plasseres i en katalog :file:`Arkaderesultater-\{uuid\\\}`. Når alt er ferdig generert, vises denne katalogen på den valgte plasseringen.
 
-*TIPS: Så lenge arkivpakkevinduet ikke forlates, kan metadata endres og "Opprett pakke" klikkes på nytt. Velges samme pakkeplassering, overskrives foregående pakke og {uuid}.xml med oppdaterte metadata. Sørg bare for at filene som skal overskrives ikke er opptatt, f.eks. ved at de er åpnet i andre programmer.*
+*TIPS: Så lenge arkivpakkevinduet ikke forlates, kan metadata endres og "Opprett pakke" klikkes på nytt. Velges samme pakkeplassering, overskrives foregående pakke og* :file:`\{uuid\\\}.xml` *med oppdaterte metadata. Sørg bare for at filene som skal overskrives ikke er opptatt, f.eks. ved at de er åpnet i andre programmer.*
 
 NB! Knappen "Ny kjøring" avslutter gjeldene arkivbehandling.
 
@@ -325,7 +325,7 @@ Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen so
 
 Resulterende data
 ^^^^^^^^^^^^^^^^^
-:command:`process` og :command:`pack` kommandoene produserer en arkivpakke som en tar-fil, med tilhørende {uuid}.xml på METS-format, samlet i en katalog. :command:`process` produserer i tillegg testrapport på HTML, XML, JSON og PDF-format; rapporten plasseres i en egen katalog ved siden av pakken.
+:command:`process` og :command:`pack` kommandoene produserer en arkivpakke som en tar-fil, med tilhørende :file:`\{uuid\\\}.xml` på METS-format, samlet i en katalog. :command:`process` produserer i tillegg testrapport på HTML, PDF, XML og JSON-format; rapporten plasseres i en egen katalog ved siden av pakken. Dersom man kjører :command:`test` lagres rapportene i en katalog på oppgitt lokasjon.
 
 .. image:: img/cli/generatedoutput.png
 
