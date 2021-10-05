@@ -92,7 +92,7 @@ Under testkjøring vil det, i den nedre delen av vinduet, vises meldinger om inn
 Testrapport
 -----------
 
-Etter fullført testing vil det genereres en rapport i formatene HTML, PDF, XML og JSON. Klikk på knappen "Vis rapport" for å åpne HTML-versjonen i en nettleser eller eksportere en katalog med rapporten i alle formater.
+Etter fullført testing vil det genereres en rapport i formatene HTML, PDF/A-1b, XML og JSON. Klikk på knappen "Vis rapport" for å åpne HTML-versjonen i en nettleser eller eksportere en katalog med rapporten i alle formater.
 
 *(!) Ved opprettelse av arkivpakke inkluderes alltid testrapporten i alle formater.*
 
@@ -325,7 +325,7 @@ Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen so
 
 Resulterende data
 ^^^^^^^^^^^^^^^^^
-:command:`process` og :command:`pack` kommandoene produserer en arkivpakke som en tar-fil, med tilhørende :file:`\{uuid\\\}.xml` på METS-format, samlet i en katalog. :command:`process` produserer i tillegg testrapport på HTML, PDF, XML og JSON-format; rapporten plasseres i en egen katalog ved siden av pakken. Dersom man kjører :command:`test` lagres rapportene i en katalog på oppgitt lokasjon.
+:command:`process` og :command:`pack` kommandoene produserer en arkivpakke som en tar-fil, med tilhørende :file:`\{uuid\\\}.xml` på METS-format, samlet i en katalog. :command:`process` produserer i tillegg testrapport på HTML, PDF/A-1b, XML og JSON-format; rapporten plasseres i en egen katalog ved siden av pakken. Dersom man kjører :command:`test` lagres rapportene i en katalog på oppgitt lokasjon.
 
 .. image:: img/cli/generatedoutput.png
 
