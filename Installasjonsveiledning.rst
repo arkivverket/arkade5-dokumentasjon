@@ -43,8 +43,8 @@ Den følgende advarselen vil vises om Windows-maskinen har "Windows Smart Screen
 **Følg installasjonsveiviseren og aksepter alle de foreslåtte installasjonsvalgene.**
 
 
-Aktiver støtte for validering av Siard-filer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Aktiver støtte for validering av SIARD-2.1-filer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_link| for validering av Siard-filer må følgende instruksjoner utføres:
 
@@ -56,7 +56,8 @@ Installer Java Runtime Environment
 Tilgjengeligjør DBPTK Developer for Arkade
 ------------------------------------------
 * Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
-* Lagre den nedlastede filen i samme katalog som den kjørbare arkade-filen.
+* Lagre den nedlastede filen under :file:`<arkadeinstallasjonsmappe>/ThirdPartySoftware/DBPTK/`.
+.. image:: img/dbptk_save_location.png
 
 .. |database_preservation_toolkit_link| raw:: html
 
@@ -191,8 +192,8 @@ Tilgjengeliggjør :code:`arkade` fra hvor som helst i filsystemet
 	echo "C:\Programfiler\Arkade5CLI-2.x.x\arkade.bat" > C:\Windows\arkade.bat
 
 
-Aktiver støtte for validering av Siard-filer
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Aktiver støtte for validering av SIARD-2.1-filer
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_link| for validering av Siard-filer må følgende instruksjoner utføres:
 
@@ -204,7 +205,8 @@ Installer Java Runtime Environment
 Tilgjengeligjør DBPTK Developer for Arkade
 ------------------------------------------
 * Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
-* Lagre den nedlastede filen i samme katalog som den kjørbare arkade-filen.
+* Lagre den nedlastede filen under :file:`<arkadeinstallasjonsmappe>/ThirdPartySoftware/DBPTK/`.
+.. image:: img/dbptk_save_location.png
 
 
 Kjør Arkade 5 CLI
