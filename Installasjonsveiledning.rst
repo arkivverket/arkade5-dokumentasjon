@@ -149,13 +149,13 @@ Gjør `Siegfried <https://www.itforarchivists.com/siegfried/>`_ (bundlet program
 
 .. code-block:: bash
 
-	chmod +x /opt/Arkade5CLI-2.x.x/Bundled/Siegfried/siegfried*
+	chmod +x /opt/Arkade5CLI-2.x.x/ThirdPartySoftware/Siegfried/siegfried*
 
 **Merk: macOS brukere må i tillegg sikkerhetsklarere** :file:`siegfried_mac` **med følgende kommando\*:**
 
 .. code-block:: bash
 
-	sudo xattr -rd com.apple.quarantine /opt/Arkade5CLI-2.x.x/Bundled/Siegfried/siegfried_mac
+	sudo xattr -rd com.apple.quarantine /opt/Arkade5CLI-2.x.x/ThirdPartySoftware/Siegfried/siegfried_mac
 
 Informasjon om hva som skjer i kulissene kan blant annet leses `her <https://support.apple.com/en-us/HT202491>`_.
 

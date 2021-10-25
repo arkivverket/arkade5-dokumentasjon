@@ -61,7 +61,7 @@ A short description of the packages in the core project:
 
 **Base** - Domain classes
 
-**Bundled** - Software which Arkade bundles
+**ThirdPartySoftware** - Third party applications run with Arkade as front-end
 
 **ExternalModels** - Classes generated from xml schemas
 
