@@ -43,7 +43,7 @@ Arkivverket.Arkade.CLI
 This project provides a cross-platform command line interface for the Arkade 5 software. It is built on the .NET Core framework, and based on the CommandLineParser and Serilog NuGet packages.
 
 Arkivverket.Arkade.CLI.Tests
------------------------
+----------------------------
 This project contains the unit tests and other tests classes for the CLI project. Unit tests are created with xUnit. 
 
 Arkivverket.Arkade.Core
@@ -80,7 +80,7 @@ A short description of the packages in the core project:
 **Util** - General utilities
 
 Arkivverket.Arkade.Core.Tests
------------------------
+-----------------------------
 This project contains the unit tests and other tests classes for the Core project. Unit tests are created with xUnit. 
 
 Arkivverket.Arkade.GUI

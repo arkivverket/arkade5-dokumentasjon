@@ -23,10 +23,17 @@ Menyvalg
 Øverst til høyre finnes det til enhver tid fire menyvalg:
 
 .. |menuItem_aboutArkade| image:: img/MenuItem_AboutArkade.png
+
+.. |menuItem_settings| image:: img/MenuItem_Settings.png
+
+.. |menuItem_webPage| image:: img/MenuItem_WebPage.png
+
+.. |menuItem_tools| image:: img/MenuItem_Tools.png
+
+
 | |menuItem_aboutArkade| **- Om Arkade**
 | Åpner et nytt vindu med informasjon om Arkade 5.
 
-.. |menuItem_settings| image:: img/MenuItem_Settings.png
 | |menuItem_settings| **- Innstillinger**
 | Åpner et nytt vindu med innstillinger brukeren kan tilpasse:
 | 	- Arkade sitt prosesseringsområde.
@@ -36,11 +43,9 @@ Menyvalg
 
 .. _Se systemdokumentasjon for støttede språk: Systemdokumentasjon.html#multilingual-support
 
-.. |menuItem_webPage| image:: img/MenuItem_WebPage.png
 | |menuItem_webPage| **- Hjemmeside**
 | Åpner hjemmesiden til Arkade i standard nettleser.
 
-.. |menuItem_tools| image:: img/MenuItem_Tools.png
 | |menuItem_tools| **- Verktøy**
 | Åpner et nytt vindu med tilleggsverktøy for Arkade. I gjeldende versjon er det eneste tilgjengelige tilleggsverktøyet PRONOM-filanalyse av en valgt katalog.
 
@@ -137,7 +142,7 @@ NB! Knappen "Ny kjøring" avslutter gjeldene arkivbehandling.
 
 
 Innstillinger |menuItem_settings|
-~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Prosesseringsområde
 -------------------

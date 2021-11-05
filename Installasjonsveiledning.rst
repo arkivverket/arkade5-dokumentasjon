@@ -57,6 +57,7 @@ Tilgjengeligjør DBPTK Developer for Arkade
 ------------------------------------------
 * Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
 * Lagre den nedlastede filen under :file:`<arkadeinstallasjonsmappe>/ThirdPartySoftware/DBPTK/`.
+
 .. image:: img/dbptk_save_location.png
 
 .. |database_preservation_toolkit_link| raw:: html
@@ -163,7 +164,7 @@ Informasjon om hva som skjer i kulissene kan blant annet leses `her <https://sup
 
 
 Tilgjengeliggjør :code:`arkade` fra hvor som helst i filsystemet
-........................................................
+................................................................
 
 Kjør følgende kommandoer:
 
@@ -179,7 +180,7 @@ Windows
 Pakk ut den nedlastede zip-filen til ønsket plassering. Eksemplet bruker :file:`C:\\Programfiler\\Arkade5CLI-{2.x.x}\\`, der "*2.x.x*" viser til aktuell versjon.
 
 Tilgjengeliggjør :code:`arkade` fra hvor som helst i filsystemet
-........................................................
+................................................................
 
 * Åpne Ledetekst (cmd) som administrator
 
@@ -206,6 +207,7 @@ Tilgjengeligjør DBPTK Developer for Arkade
 ------------------------------------------
 * Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
 * Lagre den nedlastede filen under :file:`<arkadeinstallasjonsmappe>/ThirdPartySoftware/DBPTK/`.
+
 .. image:: img/dbptk_save_location.png
 
 
