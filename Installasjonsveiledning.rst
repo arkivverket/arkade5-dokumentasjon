@@ -68,6 +68,31 @@ Tilgjengeligjør DBPTK Developer for Arkade
 
    <a href="https://java.com/en/download/" target="_blank" >https://java.com/en/download/</a>
 
+Feil ved testing av SIARD-uttrekk
+---------------------------------
+
+.. image:: img/feilmelding_dbptk.png
+
+Dersom feilmeldingen over oppstår ved testing av SIARD-uttrekk betyr det at DPBTK Developer forsøker å skrive en midlertidig log-fil til den samme katalogen som inneholder :file:`dbptk-app-2.9.9.jar`. Følgende fremgangsmåte beskriver hvordan skrive-tilgangen til katalogen kan åpnes:
+
+| **1.** Fra Arkade sin installasjonskatalog, gå inn i katalogen :file:`ThirdPartySoftware`
+| **2.** Høyreklikk på katalogen :file:`DBPTK` og velg "Egenskaper":
+
+.. image:: img/dbptk_permissions_step1.png
+
+| **3.** I vinduet som dukker opp, klikk på fanen "Sikkerhet"
+| **4.** Klikk deretter på "Rediger..."
+| **NB! - Dersom du ikke har denne tilgangen, må din systemadministrator utføre dette for deg** 
+
+.. image:: img/dbptk_permissions_step2.png
+
+| **5.** I det nye vinduet, velg "Brukere" under "Gruppe- eller brukernavn"
+| **6.** Huk av for skrivetilgang 
+| **7.** Klikk på "Bruk"
+
+.. image:: img/dbptk_permissions_step3.png
+
+Arkade skal nå kunne validere SIARD-uttrekk uten at dette problemet oppstår.
 
 Kjør programmet
 ~~~~~~~~~~~~~~~
@@ -210,6 +235,31 @@ Tilgjengeligjør DBPTK Developer for Arkade
 
 .. image:: img/dbptk_save_location.png
 
+Feil ved testing av SIARD-uttrekk
+---------------------------------
+
+.. image:: img/dbptk_feilmelding_cli.png
+
+Dersom feilmeldingen over oppstår ved testing av SIARD-uttrekk betyr det at DPBTK Developer forsøker å skrive en midlertidig log-fil til den samme katalogen som inneholder :file:`dbptk-app-2.9.9.jar`. Følgende fremgangsmåte beskriver hvordan skrive-tilgangen til katalogen kan åpnes:
+
+| **1.** Fra Arkade CLI sin installasjonskatalog, gå inn i katalogen :file:`ThirdPartySoftware`
+| **2.** Høyreklikk på katalogen :file:`DBPTK` og velg "Egenskaper":
+
+.. image:: img/dbptk_permissions_step1_cli.png
+
+| **3.** I vinduet som dukker opp, klikk på fanen "Sikkerhet"
+| **4.** Klikk deretter på "Rediger..."
+| **NB! - Dersom du ikke har denne tilgangen, må din systemadministrator utføre dette for deg** 
+
+.. image:: img/dbptk_permissions_step2_cli.png
+
+| **5.** I det nye vinduet, velg "Brukere" under "Gruppe- eller brukernavn"
+| **6.** Huk av for skrivetilgang 
+| **7.** Klikk på "Bruk"
+
+.. image:: img/dbptk_permissions_step3_cli.png
+
+Arkade skal nå kunne validere SIARD-uttrekk uten at dette problemet oppstår
 
 Kjør Arkade 5 CLI
 ~~~~~~~~~~~~~~~~~
