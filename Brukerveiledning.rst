@@ -212,7 +212,7 @@ Alle parametre foruten :code:`--help` og :code:`--version` kan oppgis i kortform
 
 Parametrenes rekkefølge er likegyldig.
 
-| **NB!** *Alle kataloger som oppgis som må eksistere på forhånd. Kommandoer, parametere og argumenter er case-sensitive på alle platformer.*
+| **NB!** *Alle kataloger som oppgis må eksistere på forhånd. Kommandoer, parametere og argumenter er case-sensitive på alle platformer.*
 
 Arkivtype (:code:`--type`/:code:`-t`)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
