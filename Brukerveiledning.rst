@@ -80,6 +80,7 @@ Testvinduet
 * Valgt arkivtype
 * Hvilken fil som under testing prosesseres i øyeblikket
 * Løpende informasjon om testkjøring*
+* Informasjon om testframdrift i prosent (N5/N3/Fagsystem) eller som statusmeldinger (Siard)
 
 *\*For uttrekk av typen Noark 5 vises antall prosesserte XML-elementer. For uttrekk basert på en ADDML-fil vises antall prosesserte filer og antall prosesserte poster.*
 
