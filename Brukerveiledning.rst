@@ -65,8 +65,6 @@ Velg og last inn arkivuttrekket som skal behandles:
 
 2) Dersom Arkade ikke automatisk har klart å detektere arkivtypen, oppgi arkivtype for det valgte uttrekket. Arkade 5 støtter typene "**Fagsystem**", "**Noark 3**", "**Noark 5**" og "**Siard**".
 
-	a) Arkade støtter ikke testing av Siard-uttrekk.
-
 3) Klikk på knappen "Last inn uttrekk". Det valgte uttrekket vil lastes inn og åpnes i testvinduet.
 
 
