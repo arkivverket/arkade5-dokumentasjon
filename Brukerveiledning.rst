@@ -47,7 +47,9 @@ Menyvalg
 | Åpner hjemmesiden til Arkade i standard nettleser.
 
 | |menuItem_tools| **- Verktøy**
-| Åpner et nytt vindu med tilleggsverktøy for Arkade. I gjeldende versjon er det eneste tilgjengelige tilleggsverktøyet PRONOM-filanalyse av en valgt katalog.
+| Åpner et nytt vindu med tilleggsverktøy for Arkade:
+| 	- PRONOM-filanalyse av en valgt katalog.
+| 	- Validering av arkivformat for en valgt fil.
 
 
 Innlastingsvinduet
@@ -326,6 +328,25 @@ Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen so
 | *Valgbare parametre ved analyse:*
 | :code:`--output-filename`/:code:`-O` (stor O)
 | :code:`--language`/:code:`-l` - `Velg hvilket språk <#sprak-language-l>`_ filer som blir generert av Arkade skal ha.
+
+:command:`validate` - Utfør validering
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Kommandoen validerer en fil oppgitt med parameteren :code:`--item`/:code:`-i` mot et gyldig arkivformat oppgitt med parameteren :code:`--format`/:code:`-f`. Resultatet vises på skjermen.
+
+Støttede formater
+ * PDF/A
+
+Eksempel:
+
+.. code-block:: bash
+
+	arkade validate -i ~/N5-arkivuttrekk/dokumenter/dokument.pdf -f PDF/A
+
+| *Obligatoriske parametre ved validering:*
+| :code:`--item`/:code:`-i` - Oppgi stien til filen som skal valideres.
+| :code:`--format`/:code:`-f` - Oppgi arkivformatet som filen skal valideres mot.
+
 
 Resulterende data
 ^^^^^^^^^^^^^^^^^

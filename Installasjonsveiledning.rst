@@ -48,15 +48,12 @@ Aktiver støtte for validering av SIARD-2.1-filer
 
 For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_link| for validering av Siard-filer må følgende instruksjoner utføres:
 
-Installer Java Runtime Environment
-----------------------------------
-* Last ned installasjonsfil for Java Runtime Environment (JRE) fra |java_download_link|
-* Installer JRE ved å dobbeltklikke den nedlastede filen
+* Installer Java Runtime Environment (`hjelp <Installasjonsveiledning.html#jre-info>`_)
 
-Tilgjengeligjør DBPTK Developer for Arkade
-------------------------------------------
-* Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
-* Lagre den nedlastede filen under :file:`<arkadeinstallasjonsmappe>/ThirdPartySoftware/DBPTK/`.
+* Tilgjengeligjør DBPTK Developer for Arkade
+
+	- Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
+	- Lagre den nedlastede filen under :file:`<arkadeinstallasjonsmappe>/ThirdPartySoftware/DBPTK/`.
 
 .. image:: img/dbptk_save_location.png
 
@@ -64,9 +61,16 @@ Tilgjengeligjør DBPTK Developer for Arkade
 
    <a href="https://database-preservation.com/#developer" target="_blank">Database Preservation Toolkit Developer (DBPTK Developer)</a>
 
-.. |java_download_link| raw:: html
 
-   <a href="https://java.com/en/download/" target="_blank" >https://java.com/en/download/</a>
+
+
+Aktiver støtte for validering av PDF/A
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For å kunne validere PDF/A-filer må Java Runtime Environment være installert:
+
+
+* Installer Java Runtime Environment (`hjelp <Installasjonsveiledning.html#jre-info>`_)
 
 
 Kjør programmet
@@ -198,17 +202,22 @@ Aktiver støtte for validering av SIARD-2.1-filer
 
 For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_link| for validering av Siard-filer må følgende instruksjoner utføres:
 
-Installer Java Runtime Environment
-----------------------------------
-* Last ned installasjonsfil for Java Runtime Environment (JRE) fra |java_download_link|
-* Installer JRE ved å dobbeltklikke den nedlastede filen
+* Installer Java Runtime Environment (`hjelp <Installasjonsveiledning.html#jre-info>`_)
 
-Tilgjengeligjør DBPTK Developer for Arkade
-------------------------------------------
-* Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
-* Lagre den nedlastede filen under :file:`<arkadeinstallasjonsmappe>/ThirdPartySoftware/DBPTK/`.
+* Tilgjengeligjør DBPTK Developer for Arkade
+
+	- Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
+	- Lagre den nedlastede filen under :file:`<arkadeinstallasjonsmappe>/ThirdPartySoftware/DBPTK/`.
 
 .. image:: img/dbptk_save_location.png
+
+
+Aktiver støtte for validering av PDF/A
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+For å kunne validere PDF/A-filer må Java Runtime Environment være installert:
+
+* Installer Java Runtime Environment (`hjelp <Installasjonsveiledning.html#jre-info>`_)
 
 
 Kjør Arkade 5 CLI
@@ -228,3 +237,16 @@ Avinstaller Arkade 5 CLI
 * **Windows:** Åpne ledetekst som administrator og kjør :code:`del C:\Windows\arkade.bat`
 
 *Mindre enn 1 uke gamle system- og feillogger slettes ikke automatisk etter kjøring.* `Les mer ... <Brukerveiledning.html#prosesseringsomrade-cli>`_
+
+
+
+.. tip:: Installer Java Runtime Environment
+	:name: jre-info
+	
+	* Last ned installasjonsfil for JRE fra |java_download_link|
+	* Installer JRE ved å dobbeltklikke den nedlastede filen
+
+
+.. |java_download_link| raw:: html
+
+   <a href="https://java.com/en/download/" target="_blank" >https://java.com/en/download/</a>
