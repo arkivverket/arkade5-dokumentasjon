@@ -15,11 +15,11 @@ For å kjøre Arkade 5 må .NET 6 Desktop Runtime være installert:
 
 .. |dotnet_desktop_x64_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-6.0.1-windows-x64-installer" target="_blank">.NET 6 Desktop Runtime  <b>x64</b></a>
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-6.0.3-windows-x64-installer" target="_blank">.NET 6 Desktop Runtime  <b>x64</b></a>
 
 .. |dotnet_desktop_x86_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-6.0.1-windows-x86-installer" target="_blank">.NET 6 Desktop Runtime <b>x86</b></a>
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-6.0.3-windows-x86-installer" target="_blank">.NET 6 Desktop Runtime <b>x86</b></a>
 
 
 Installer Arkade 5 
@@ -123,15 +123,15 @@ Med Ubuntu/Debian kan .NET 6 Runtime installeres med følgende kommando:
 
 .. |dotnet_macos_x64_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-6.0.1-macos-x64-installer" target="_blank">.NET 6 Runtime <b>x64</b></a>
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-6.0.3-macos-x64-installer" target="_blank">.NET 6 Runtime <b>x64</b></a>
 
 .. |dotnet_windows_x64_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-6.0.1-windows-x64-installer" target="_blank">.NET 6 Runtime <b>x64</b></a>
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-6.0.3-windows-x64-installer" target="_blank">.NET 6 Runtime <b>x64</b></a>
 
 .. |dotnet_windows_x86_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-6.0.1-windows-x86-installer" target="_blank">.NET 6 Runtime <b>x86</b></a>
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-6.0.3-windows-x86-installer" target="_blank">.NET 6 Runtime <b>x86</b></a>
 
 
 Installer Arkade 5 CLI
