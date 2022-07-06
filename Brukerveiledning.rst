@@ -137,7 +137,7 @@ Når ønskede metadata er oppgitt, klikkes knappen "Opprett pakke". Dette åpner
 
 Arkivpakken vil opprettes som en tar-fil og filnavnet vil være UUID-en som er generert for den gjeldende arkivbehandlingen: :file:`\{uuid\\\}.tar`. Pakken og tilhørende :file:`\{uuid\\\}.xml`-fil plasseres i en katalog :file:`Arkaderesultater-\{uuid\\\}`. Når alt er ferdig generert, vises denne katalogen på den valgte plasseringen.
 
-NB! Knappen "Ny kjøring" avslutter gjeldene arkivbehandling.
+**NB! Knappen "Ny kjøring" avslutter gjeldene arkivbehandling.**
 
 .. tip:: 
 
