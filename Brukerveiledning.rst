@@ -144,6 +144,17 @@ NB! Knappen "Ny kjøring" avslutter gjeldene arkivbehandling.
     **Pakke re-generering**
 	*Så lenge arkivpakkevinduet ikke forlates, kan metadata endres og "Opprett pakke" klikkes på nytt. Velges samme pakkeplassering, overskrives foregående pakke og* :file:`\{uuid\\\}.xml` *med oppdaterte metadata. Sørg bare for at filene som skal overskrives ikke er opptatt, f.eks. ved at de er åpnet i andre programmer.*
 
+	*--------------------------------*
+	
+    **ESSArch-tilpasninger**
+	*Følgende operasjoner kan forenkle innlastning av arkivpakke i ESSArch:*
+	
+	* *Navn om pakkeinformasjonsfilen fra* :file:`\{uuid\\\}.xml` til :file:`info.xml` *(eller annet fast navn iht. ESSArchs  konfigurasjon)*
+	* *Fjern linjene i pakkeinformasjonsfilen som beskriver filen dias-mets.xml (se bildet)*
+	* *Plasser pakkeinformasjonsfilen og pakkefilen i en egen katalog*
+
+	.. image:: img/remove-mets-fileref.png
+
 Innstillinger |menuItem_settings|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
