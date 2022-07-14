@@ -355,20 +355,41 @@ Kommandoen under ufører PRONOM filformatanalyse på alt innhold i katalogen som
 :command:`validate` - Utfør validering
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Kommandoen validerer en fil oppgitt med parameteren :code:`--item`/:code:`-i` mot et gyldig arkivformat oppgitt med parameteren :code:`--format`/:code:`-f`. Resultatet vises på skjermen.
+Kommandoen validerer en katalog eller en fil oppgitt med parameteren :code:`--item`/:code:`-i` mot et gyldig arkivformat oppgitt med parameteren :code:`--format`/:code:`-f`. Resultatet vises på skjermen.
 
 Støttede formater
  * PDF/A
+ * DIAS
 
-Eksempel:
+Validering av en enkelt fil mot PDF/A-formatet:
 
 .. code-block:: bash
 
-	arkade validate -i ~/N5-arkivuttrekk/dokumenter/dokument.pdf -f PDF/A
+	arkade validate -i ~/N5-arkivuttrekk/dokumenter/detteErKanskjeEnPdfa.pdf -f PDF/A
+
+Validering av alle filer i en katalog og dens underkataloger mot PDF/A-formatet:
+
+.. code-block:: bash
+
+	arkade validate -i ~/N5-arkivuttrekk/dokumenter/ -f PDF/A -o ~/output/
+
+Validering av en .tar mot DIAS-formatet:
+
+.. code-block:: bash
+
+	arkade validate -i ~/output/arkade-resultater_{uuid}/{uuid}.tar -f DIAS
+
+Validering av en katalog mot DIAS-formatet:
+
+.. code-block:: bash
+
+	arkade validate -i ~/N5-arkivuttrekk/ -f DIAS
+
 
 | *Obligatoriske parametre ved validering:*
 | :code:`--item`/:code:`-i` - Oppgi stien til filen som skal valideres.
 | :code:`--format`/:code:`-f` - Oppgi arkivformatet som filen skal valideres mot.
+| :code:`--output-directory`/:code:`-o` - **NB!** Kun påkrevd dersom :code:`-i` er en katalog **og** :code:`-f` er PDF/A.
 
 
 Resulterende data
