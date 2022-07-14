@@ -313,11 +313,17 @@ Lag en arkivpakke.
 
 :command:`generate` - Lag en eksempelfil
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-Kommandoen under lager både en metadata-fil og en testutvalg-fil i katalogen som er gitt til parameteren :code:`--output-directory`/:code:`-o`. Filene lagres med standardnavn avhengig av hvilket språk som er valgt. I eksempelet er det valgt norsk bokmål, standardnavn blir derfor :file:`arkade-ip-metadata.json` og :file:`noark5-testutvalg.txt`.
+Kommandoen under lager både en metadatafil og en testutvalgfil i katalogen som er gitt til parameteren :code:`--output-directory`/:code:`-o`. Filene lagres med standardnavn avhengig av hvilket språk som er valgt. I eksempelet er det valgt norsk bokmål, standardnavn blir derfor :file:`arkade-ip-metadata.json` og :file:`noark5-testutvalg.txt`.
 
 .. code-block:: bash
 
 	arkade generate -o ~/output/ -m -s -l nb
+
+Dersom man ønsker å overstyre standardnavnet til metadata- eller testutvalgfilen kan man henholdsvis bruke :code:`--metadata-example-filename`/:code:`-M` eller :code:`--noark5-test-selection-filename`/:code:`-S`.
+
+.. code-block:: bash
+
+	arkade generate -o ~/output/ -m -s -l nb -M minMetsfilForNoark5Uttrekk.json -S kunN5_3.txt
 
 | *Obligatoriske parametre ved filgenerering:*
 | :code:`--metadata-example`/:code:`-m` *eller* :code:`--noark5-test-selection`/:code:`-s` (*minst én av parametrene må oppgis*)
@@ -325,22 +331,25 @@ Kommandoen under lager både en metadata-fil og en testutvalg-fil i katalogen so
 
 | *Valgbare parametre ved filgenerering:*
 | :code:`--language`/:code:`-l` - `Velg hvilket språk <#sprak-language-l>`_ filer som blir generert av Arkade skal ha.
+| :code:`--metadata-example-filename`/:code:`-M` - Oppgi valgfritt navn på metadatafil.
+| :code:`--noark5-test-selection-filename`/:code:`-S` - Oppgi valgfritt navn på testutvalgfil.
 
 :command:`analyse` - Utfør analyse
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Kommandoen under ufører PRONOM filformat-analyse på alt innhold i katalogen som er gitt til parameteren :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`. Standardnavnet på resultatfilen kan om ønskelig overstyres med parameteren :code:`--output-filename`/:code:`-O` (stor O).
+Kommandoen under ufører PRONOM filformatanalyse på alt innhold i katalogen som er gitt til parameteren :code:`--format-analysis`/:code:`-f`. Resultatet av analysen lagres i katalogen som oppgis til :code:`--output-directory`/:code:`-o`. Standardnavnet på resultatfilen fra formatanalysen kan om ønskelig overstyres med parameteren :code:`--format-analysis-filename`/:code:`-F`.
 
 .. code-block:: bash
 
-	arkade analyse -f ~/directory -o ~/output/ -O myResultFileName
+	arkade analyse -f ~/directory -o ~/output/ -F myResultFileName
 
 | *Obligatoriske parametre ved analyse:*
 | :code:`--format-analysis`/:code:`-f`
 | :code:`--output-directory`/:code:`-o`
 
 | *Valgbare parametre ved analyse:*
-| :code:`--output-filename`/:code:`-O` (stor O)
+| :code:`--output-filename`/:code:`-O` (stor O) - **UTGÅR** - bruk heller :code:`-F`
+| :code:`--format-analysis-filename`/:code:`-F` - Oppgi valgfritt navn på resultatfil for formatanalysen.
 | :code:`--language`/:code:`-l` - `Velg hvilket språk <#sprak-language-l>`_ filer som blir generert av Arkade skal ha.
 
 :command:`validate` - Utfør validering
