@@ -62,17 +62,6 @@ For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_lin
    <a href="https://database-preservation.com/#developer" target="_blank">Database Preservation Toolkit Developer (DBPTK Developer)</a>
 
 
-
-
-Aktiver støtte for validering av PDF/A
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-For å kunne validere PDF/A-filer må Java Runtime Environment være installert:
-
-
-* Installer Java Runtime Environment (`hjelp <Installasjonsveiledning.html#jre-info>`_)
-
-
 Kjør programmet
 ~~~~~~~~~~~~~~~
 .. image:: img/RunTool.png
@@ -212,12 +201,18 @@ For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_lin
 .. image:: img/dbptk_save_location.png
 
 
-Aktiver støtte for validering av PDF/A
+Aktiver støtte for validering av PDF/A 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
+Linux/Mac
+---------
 For å kunne validere PDF/A-filer må Java Runtime Environment være installert:
 
 * Installer Java Runtime Environment (`hjelp <Installasjonsveiledning.html#jre-info>`_)
+
+Windows
+-------
+Ingen handling er nødvendig siden biblioteket som brukes for PDF/A-valideringen inkluderer avhengighetene som Windows trenger.
 
 
 Kjør Arkade 5 CLI
