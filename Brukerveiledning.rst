@@ -49,7 +49,7 @@ Menyvalg
 | |menuItem_tools| **- Verktøy**
 | Åpner et nytt vindu med tilleggsverktøy for Arkade:
 | 	- PRONOM-filanalyse av en valgt katalog.
-| 	- Validering av arkivformat for en valgt fil.
+| 	- Validering av arkivformat for en valgt fil eller katalog.
 | 	- Generering av en mal-fil for `import av metadata <#arkivpakkevinduet>`_.
 
 
