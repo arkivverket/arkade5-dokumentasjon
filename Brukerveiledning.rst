@@ -359,7 +359,6 @@ Kommandoen validerer en katalog eller en fil oppgitt med parameteren :code:`--it
 
 Støttede formater
  * PDF/A
- * DIAS
 
 Validering av en enkelt fil mot PDF/A-formatet:
 
@@ -373,23 +372,11 @@ Validering av alle filer i en katalog og dens underkataloger mot PDF/A-formatet:
 
 	arkade validate -i ~/N5-arkivuttrekk/dokumenter/ -f PDF/A -o ~/output/
 
-Validering av en .tar mot DIAS-formatet:
-
-.. code-block:: bash
-
-	arkade validate -i ~/output/arkade-resultater_{uuid}/{uuid}.tar -f DIAS
-
-Validering av en katalog mot DIAS-formatet:
-
-.. code-block:: bash
-
-	arkade validate -i ~/N5-arkivuttrekk/ -f DIAS
-
 
 | *Obligatoriske parametre ved validering:*
 | :code:`--item`/:code:`-i` - Oppgi stien til filen som skal valideres.
 | :code:`--format`/:code:`-f` - Oppgi arkivformatet som filen skal valideres mot.
-| :code:`--output-directory`/:code:`-o` - **NB!** Kun påkrevd dersom :code:`-i` er en katalog **og** :code:`-f` er PDF/A.
+| :code:`--output-directory`/:code:`-o` - **NB!** Kun påkrevd dersom :code:`-i` er en katalog.
 
 
 Resulterende data
