@@ -14,43 +14,9 @@ Arkade 5 muliggjør også opprettelse/endring av metadata for arkivuttrekk.
 Oppstart/avslutning
 ~~~~~~~~~~~~~~~~~~~
 
-Ved oppstart av Arkade åpnes innlastingsvinduet. Dersom et tilgjengelig område for midlertidige filer ikke allerede er definert, vil Arkade først be om at dette blir oppgitt (se innstillinger - tannhjul i hjørnet oppe til høyre). Arkade avsluttes ved å lukke hovedvinduet. Ved avslutning igangsettes sletting av midlertidige filer.
+Ved oppstart av Arkade åpnes innlastingsvinduet. Dersom et tilgjengelig område for midlertidige filer ikke allerede er definert, vil Arkade først be om at dette blir oppgitt (`se "Prosesseringsområde" <#prosesseringsomrade>`_). Arkade avsluttes ved å lukke hovedvinduet. Ved avslutning igangsettes sletting av midlertidige filer.
 
 
-Menyvalg
-~~~~~~~~
-
-Øverst til høyre finnes det til enhver tid fire menyvalg:
-
-.. |menuItem_aboutArkade| image:: img/MenuItem_AboutArkade.png
-
-.. |menuItem_settings| image:: img/MenuItem_Settings.png
-
-.. |menuItem_webPage| image:: img/MenuItem_WebPage.png
-
-.. |menuItem_tools| image:: img/MenuItem_Tools.png
-
-
-| |menuItem_aboutArkade| **- Om Arkade**
-| Åpner et nytt vindu med informasjon om Arkade 5.
-
-| |menuItem_settings| **- Innstillinger**
-| Åpner et nytt vindu med innstillinger brukeren kan tilpasse:
-| 	- Arkade sitt prosesseringsområde.
-| 	- Språk i brukergrensesnitt (`Se systemdokumentasjon for støttede språk`_)
-| 	- Språk for utdata (`Se systemdokumentasjon for støttede språk`_)
-| 	- Mørk/lys modus.
-
-.. _Se systemdokumentasjon for støttede språk: Systemdokumentasjon.html#multilingual-support
-
-| |menuItem_webPage| **- Hjemmeside**
-| Åpner hjemmesiden til Arkade i standard nettleser.
-
-| |menuItem_tools| **- Verktøy**
-| Åpner et nytt vindu med tilleggsverktøy for Arkade:
-| 	- PRONOM-filanalyse av en valgt katalog.
-| 	- Validering av arkivformat for en valgt fil eller katalog.
-| 	- Generering av en mal-fil for `import av metadata <#arkivpakkevinduet>`_.
 
 
 Innlastingsvinduet
@@ -128,7 +94,7 @@ Arkivpakkevinduet
 
 .. image:: img/PackageWindow.png
 
-Før arkivpakke opprettes registreres aktuelle metadata. For å skape en gyldig arkivpakke må påkrevde felter (merket *) utfylles. Dersom det aktuelle arkivuttrekket i utgangspunktet var en arkivpakke (AIP/SIP) med allerede definerte metadata, vil Arkade forsøke å lese disse inn og forhåndsutfylle feltene i arkivpakkevinduet. Ved å klikke knappen "Hent eksterne metadata" kan det velges en fil med forhåndsdefinerte metadata, enten en METS-fil (f.eks. {uuid}.xml, info.xml eller dias-mets.xml fra tidligere produsert pakke) eller metadata på JSON-format (f.eks. generert med Arkade CLI) for automatisk utfylling av feltene. Når pakken opprettes skrives den utfylte informasjonen til filen dias-mets.xml som legges ved i arkivpakken. Metadataene skrives også til filen {uuid}.xml som legges utenfor, på samme nivå som, arkivpakken.
+Før arkivpakke opprettes registreres aktuelle metadata. For å skape en gyldig arkivpakke må påkrevde felter (merket *) utfylles. Dersom det aktuelle arkivuttrekket i utgangspunktet var en arkivpakke (AIP/SIP) med allerede definerte metadata, vil Arkade forsøke å lese disse inn og forhåndsutfylle feltene i arkivpakkevinduet. Ved å klikke knappen "Hent eksterne metadata" kan det velges en fil med forhåndsdefinerte metadata, enten en METS-fil (f.eks. {uuid}.xml, info.xml eller dias-mets.xml fra tidligere produsert pakke) eller metadata på JSON-format - f.eks. generert med `malfil-generator <#generering-av-mal-fil-for-metadata>`_ (GUI) eller med Arkade CLI - for automatisk utfylling av feltene. Når pakken opprettes skrives den utfylte informasjonen til filen dias-mets.xml som legges ved i arkivpakken. Metadataene skrives også til filen {uuid}.xml som legges utenfor, på samme nivå som, arkivpakken.
 
 I nedre del av vinduet velges ønsket pakketype, SIP eller AIP.
 
@@ -155,6 +121,61 @@ Arkivpakken vil opprettes som en tar-fil og filnavnet vil være UUID-en som er g
 	* *Plasser pakkeinformasjonsfilen og pakkefilen i en egen katalog*
 
 	.. image:: img/remove-mets-fileref.png
+
+
+Knappemeny
+~~~~~~~~~~
+
+Øverst til høyre i Arkades hovedvindu finnes det til enhver tid følgende knapper:
+
+.. |menuItem_tools| image:: img/MenuItem_Tools.png
+
+.. |menuItem_webPage| image:: img/MenuItem_WebPage.png
+
+.. |menuItem_settings| image:: img/MenuItem_Settings.png
+
+.. |menuItem_aboutArkade| image:: img/MenuItem_AboutArkade.png
+
+
+|menuItem_tools| **Verktøy** - Ulike tilleggsverktøy (`se "Verktøy" <#verktoy-menuitem-tools>`_)
+
+
+|menuItem_webPage| **Hjemmeside** - Åpner Arkades nettsted i standard nettleser
+
+
+|menuItem_settings| **Innstillinger** - Innstillinger for språk og midlertidige filer m.m. (`se "Innstillinger" <#innstillinger-menuitem-settings>`_)
+
+
+|menuItem_aboutArkade| **Om Arkade** - Viser versjons- og lisensinformasjon for Arkade 5 og tilknyttet programvare
+
+
+Verktøy |menuItem_tools|
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+Åpner et vindu med tilleggsverktøy for Arkade:
+
+
+PRONOM filformat-analyse
+------------------------
+
+Analyse av filformater iht. PRONOM for filer i en valgt katalog og dens underkataloger (rekursivt).
+
+
+Validering av arkivformat
+-------------------------
+
+Validering av om en valgt fil eller katalog har det valgte formatet blant følgende:
+
+* PDF/A
+	Validering av valgt PDF-fil, eller av PDF-filene i en valgt katalog. Validatoren kontrollerer om filene er PDF/A av en variant godkjent av Arkivverket (PDF/A-1A, -1B, -2A, -2B eller -2U).
+* DIAS
+    Validering av en valgt SIP eller AIP som tar-fil eller katalog. Validatoren kontrollerer om informasjonspakken har en fil- og katalogstruktur som er iht. `spesifikasjonen for DIAS <https://www.arkivverket.no/forvaltning-og-utvikling/regelverk-og-standarder/dias-prosjektet-digital-arkivpakkestruktur>`_. (Filinnhold blir ikke kontrollert.) Enkelte spesielle avvik fra standarden blir akseptert av Arkivverket. Det framgår av valideringsresultatet om pakkens struktur er gyldig (uten mangler), ugyldig (mangelfull) eller akseptabel (har aksepterte mangler).
+
+Generering av mal-fil for metadata
+----------------------------------
+
+Generering av en json-fil med riktig METS-struktur, utfylt med eksempeldata. Etter å ha erstattet eksempeldata med reelle data, kan filen importeres for utfylling av metadata i `Arkivpakkevinduet <#arkivpakkevinduet>`_.
+
 
 Innstillinger |menuItem_settings|
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -391,6 +412,7 @@ Validering av en katalog mot DIAS-formatet:
 | :code:`--format`/:code:`-f` - Oppgi arkivformatet som filen skal valideres mot.
 | :code:`--output-directory`/:code:`-o` - **NB!** Kun påkrevd dersom :code:`-i` er en katalog **og** :code:`-f` er PDF/A.
 
+`Mer om validering av arkivformat <#validering-av-arkivformat>`_
 
 Resulterende data
 ^^^^^^^^^^^^^^^^^
