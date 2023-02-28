@@ -158,7 +158,7 @@ Verktøy |menuItem_tools|
 PRONOM filformat-analyse
 ------------------------
 
-Analyse av filformater iht. PRONOM for filer i en valgt katalog og dens underkataloger (rekursivt).
+Analyse av filformater iht. PRONOM for filer i en valgt katalog og dens underkataloger (rekursivt). Hver fil sin PRONOM-id kontrolleres mot hvilke filformater `Riksarkivarens Forskrift <https://lovdata.no/dokument/SF/forskrift/2017-12-19-2286>`_ definerer som gyldige arkivformater. Gyldigheten spesifiseres under feltet med header-navn "RAF-yyMMdd", der "yyMMdd" viser til endringsdatoen til versjonen av forskriften valideringen baserer seg på.
 
 
 Validering av arkivformat
