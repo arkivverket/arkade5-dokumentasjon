@@ -104,7 +104,7 @@ Med Ubuntu/Debian kan .NET 6 Runtime installeres med følgende kommando:
 * **macOS:** Last ned |dotnet_macos_x64_download_link|
 * **Windows:** Last ned |dotnet_windows_x64_download_link| eller |dotnet_windows_x86_download_link|
 
-.NET 5 Runtime er inkludert i, og ikke nødvendig å installere i tillegg til, .NET 5 **Desktop** Runtime (som er krevet av Arkade 5 skrivebordsapplikasjon).
+.NET 6 Runtime er inkludert i, og ikke nødvendig å installere i tillegg til, .NET 6 **Desktop** Runtime (som er krevet av Arkade 5 skrivebordsapplikasjon).
 
 .. |dotnet_linux_instructions_link| raw:: html
 
