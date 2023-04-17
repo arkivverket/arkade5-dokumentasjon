@@ -294,6 +294,7 @@ Under vises et eksempel på hvordan kommandoen :command:`process` brukes. Det le
 | :code:`--information-package-type`/:code:`-i` - Standardverdi 'SIP'. Kan overstyres til 'AIP'.
 | :code:`--language`/:code:`-l` - `Velg hvilket språk <#sprak-language-l>`_ filer som blir generert av Arkade skal ha.
 | :code:`--noark5-test-selection`/:code:`-s` - Oppgi sti til en fil som inneholder et utvalg av tester som skal kjøres.
+| :code:`--result-display-limit`/:code:`-r` - Definerer maksimalt antall resultater som vises per testpunkt i .html- og .pdf-testrapporter. Standardverdi er 100.
 | :code:`--document-file-format-check`/:code:`-f` - Arkade utfører formatanalyse av dokumentfiler og lagrer resultatet i en csv-fil i tar-pakken.
 
 :command:`test` - Testing av arkivuttrekk
@@ -311,6 +312,7 @@ Test om et arkivuttrekk er i henhold til standard. Eksempel på bruk:
 | *Valgbare parametre ved testing av arkivuttrekk:*
 | :code:`--type`/:code:`-t` - Oppgi for å overstyre `detektert arkivtype <#arkivtype-type-t>`_.
 | :code:`--language`/:code:`-l` - `Velg hvilket språk <#sprak-language-l>`_ filer som blir generert av Arkade skal ha.
+| :code:`--result-display-limit`/:code:`-r` - Definerer maksimalt antall resultater som vises per testpunkt i .html- og .pdf-testrapporter. Standardverdi er 100.
 | :code:`--noark5-test-selection`/:code:`-s` - Oppgi sti til en fil som inneholder et utvalg av tester som skal kjøres. Arkade CLI kan `lage en fil med et eksempel på en liste over tester <#generate-lag-en-eksempelfil>`_.
 
 :command:`pack` - Pakking av arkivuttrekk
