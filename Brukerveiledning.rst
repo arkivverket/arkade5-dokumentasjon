@@ -158,8 +158,9 @@ Verktøy |menuItem_tools|
 PRONOM filformat-analyse
 ------------------------
 
-Analyse av filformater iht. PRONOM for filer i en valgt katalog og dens underkataloger (rekursivt). Hver fil sin PRONOM-id kontrolleres mot hvilke filformater `Riksarkivarens Forskrift <https://lovdata.no/dokument/SF/forskrift/2017-12-19-2286>`_ definerer som gyldige arkivformater. Gyldigheten spesifiseres under feltet med header-navn "RAF-yyMMdd", der "yyMMdd" viser til endringsdatoen til versjonen av forskriften valideringen baserer seg på.
+.. _Riksarkivarens forskrift: https://lovdata.no/dokument/SF/forskrift/2017-12-19-2286
 
+Analyse av filformater iht. PRONOM for filer i en valgt katalog og dens underkataloger (rekursivt). Hver fil sin PRONOM-id kontrolleres mot hvilke filformater `Riksarkivarens forskrift`_ definerer som gyldige arkivformater. Gyldigheten spesifiseres under feltet med header-navn :code:`RAF-yyMMdd`, der :code:`yyMMdd` viser til endringsdatoen til versjonen av forskriften valideringen baserer seg på. Dersom filens gyldighet er spesifiert med :code:`Gyldig*`, indikerer asteriksen (:code:`*`) at filformatet er godkjent under visse forutsetninger, gitt av `Riksarkivarens forskrift`_. Arkade har ikke tilgang til de spesifikke forutsetningene, disse må derfor undersøkes nærmere manuelt.
 
 Validering av arkivformat
 -------------------------
