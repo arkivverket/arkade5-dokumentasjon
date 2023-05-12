@@ -250,7 +250,7 @@ List of implemented Noark5 Tests:
 * N5.63 - Kontroll av at XML-element inneholder en verdi
 * N5.64 - Antall tomme dokumentfiler i arkivstrukturen
 ..
-   * Testen teller dokumentfiler som enten er dokumentert med elementet <filstoerrelse>0</filstoerrelse>, eller eksisterer med størrelse/lengde 0. Det er kun filer som er refert til i arkivstruktur.xml som blir telt. Med andre ord: filer som eksisterer i uttrekket, men ikke er referert til i et dokumentObjekt-element, blir ikke telt.
+   * Beskrivelse av N5.64: Testen teller dokumentfiler som er referert til i arkivstruktur.xml, og filens faktiske størrelse er 0.
 
 ------------------------------------------
 
