@@ -223,7 +223,7 @@ List of implemented Noark5 Tests:
 * N5.26 - Antall dokumentobjekter i arkivstrukturen
 * N5.27 - Start- og sluttdato for dokumentene i arkivstrukturen
 * N5.28 - Antall dokumentfiler i arkivuttrekket
-* N5.29 - Antall dokumenter i arkivuttrekket fordelt på dokumentformat
+* N5.29 - Antall dokumenter i arkivuttrekket fordelt på dokumentformat (filendelse*)
 * N5.30 - Kontroll av sjekk-summen for hver dokumentfil i arkivuttrekket
 * N5.32 - Kontroll på om dokumentobjektene i arkivstrukturen refererer til eksisterende
 * N5.33 - Kontroll på at det ikke finnes dokumentfiler i arkivuttrekket som mangler referanse fra dokumentobjektet 
@@ -249,6 +249,9 @@ List of implemented Noark5 Tests:
 * N5.62 - Kontroll av referansene i endringsloggen
 * N5.63 - Kontroll av at XML-element inneholder en verdi
 * N5.64 - Antall tomme dokumentfiler i arkivstrukturen
+
+ \*Det kontrolleres for likhet mellom faktisk filendelse og innholdet i feltet *format* under filens dokumentobjekt i arkivstruktur.xml.  
+
 ..
    * Beskrivelse av N5.64: Testen teller dokumentfiler som er referert til i arkivstruktur.xml, og filens faktiske størrelse er 0.
 
