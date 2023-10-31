@@ -50,7 +50,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'Arkade 5'
-copyright = '2021, Arkivverket'
+copyright = '2023, Arkivverket'
 author = 'Arkitektum AS'
 
 # The version info for the project you're documenting, acts as replacement for
