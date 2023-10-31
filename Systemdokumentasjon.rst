@@ -154,7 +154,7 @@ Schemas for JSON and XML reports are available from the below links:
 ADDML
 =====
 
-Arkade is built to support ADDML version 8.2. 
+Arkade is built to support ADDML version 8.3. 
 
 List of supported ADDML processes:
 
