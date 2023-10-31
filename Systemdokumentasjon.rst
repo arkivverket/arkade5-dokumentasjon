@@ -163,7 +163,6 @@ List of supported ADDML processes:
 * A.03 Analyse_FindExtremeRecords - Lengste og kortest post
 * A.04 Analyse_CountRecordDefinitionOccurences - Antall poster for posttype
 * A.05 Analyse_AllFrequenceList - Koder brukt i datasettet
-* A.06 Analyse_CrossTable
 * A.07 Analyse_CountNULL - Antall null-verdi for felt
 * A.08 Analyse_FindExtremeValues - Lengste og korteste verdi for felt
 * A.09 Analyse_FindMinMaxValue - Laveste og høyeste verdi for felt
