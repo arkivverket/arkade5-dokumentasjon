@@ -9,17 +9,17 @@ Arkade 5
 Installer .NET
 ~~~~~~~~~~~~~~
 
-For å kjøre Arkade 5 må .NET 6 Desktop Runtime være installert:
+For å kjøre Arkade 5 må .NET 8 Desktop Runtime være installert:
 
    * Last ned |dotnet_desktop_x64_download_link| eller |dotnet_desktop_x86_download_link|
 
 .. |dotnet_desktop_x64_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-6.0.3-windows-x64-installer" target="_blank">.NET 6 Desktop Runtime  <b>x64</b></a>
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-8.0.6-windows-x64-installer" target="_blank">.NET 8 Desktop Runtime  <b>x64</b></a>
 
 .. |dotnet_desktop_x86_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-6.0.3-windows-x86-installer" target="_blank">.NET 6 Desktop Runtime <b>x86</b></a>
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-desktop-8.0.6-windows-x86-installer" target="_blank">.NET 8 Desktop Runtime <b>x86</b></a>
 
 
 Installer Arkade 5 
@@ -52,7 +52,7 @@ For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_lin
 
 * Tilgjengeligjør DBPTK Developer for Arkade
 
-	- Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
+	- Last ned :download:`dbptk-app-2.11.0.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.11.0/dbptk-app-2.11.0.jar>`
 	- Lagre den nedlastede filen under :file:`<arkadeinstallasjonsmappe>/ThirdPartySoftware/DBPTK/`.
 
 .. image:: img/dbptk_save_location.png
@@ -92,19 +92,19 @@ Arkade 5 CLI
 Installer .NET
 ~~~~~~~~~~~~~~
 
-For å kjøre Arkade 5 CLI må .NET 6 Runtime være installert.
+For å kjøre Arkade 5 CLI må .NET 8 Runtime være installert.
 
-Med Ubuntu/Debian kan .NET 6 Runtime installeres med følgende kommando:
+Med Ubuntu/Debian kan .NET 8 Runtime installeres med følgende kommando:
     
 .. code-block:: bash
 
-	sudo apt-get install -y dotnet-runtime-6.0
+	sudo apt-get install -y dotnet-runtime-8.0
 
 * **Linux:** Se |dotnet_linux_instructions_link| for din Linux-distribusjon
 * **macOS:** Last ned |dotnet_macos_x64_download_link|
 * **Windows:** Last ned |dotnet_windows_x64_download_link| eller |dotnet_windows_x86_download_link|
 
-.NET 6 Runtime er inkludert i, og ikke nødvendig å installere i tillegg til, .NET 6 **Desktop** Runtime (som er krevet av Arkade 5 skrivebordsapplikasjon).
+.NET 8 Runtime er inkludert i, og ikke nødvendig å installere i tillegg til, .NET 8 **Desktop** Runtime (som er krevet av Arkade 5 skrivebordsapplikasjon).
 
 .. |dotnet_linux_instructions_link| raw:: html
 
@@ -112,15 +112,15 @@ Med Ubuntu/Debian kan .NET 6 Runtime installeres med følgende kommando:
 
 .. |dotnet_macos_x64_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-6.0.3-macos-x64-installer" target="_blank">.NET 6 Runtime <b>x64</b></a>
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-8.0.6-macos-x64-installer" target="_blank">.NET 8 Runtime <b>x64</b></a>
 
 .. |dotnet_windows_x64_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-6.0.3-windows-x64-installer" target="_blank">.NET 6 Runtime <b>x64</b></a>
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-8.0.6-windows-x64-installer" target="_blank">.NET 8 Runtime <b>x64</b></a>
 
 .. |dotnet_windows_x86_download_link| raw:: html
 
-   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-6.0.3-windows-x86-installer" target="_blank">.NET 6 Runtime <b>x86</b></a>
+   <a href="https://dotnet.microsoft.com/download/dotnet/thank-you/runtime-8.0.6-windows-x86-installer" target="_blank">.NET 8 Runtime <b>x86</b></a>
 
 
 Installer Arkade 5 CLI
@@ -195,7 +195,7 @@ For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_lin
 
 * Tilgjengeligjør DBPTK Developer for Arkade
 
-	- Last ned :download:`dbptk-app-2.9.9.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.9.9/dbptk-app-2.9.9.jar>`
+	- Last ned :download:`dbptk-app-2.11.0.jar <https://github.com/keeps/dbptk-developer/releases/download/v2.11.0/dbptk-app-2.11.0.jar>`
 	- Lagre den nedlastede filen under :file:`<arkadeinstallasjonsmappe>/ThirdPartySoftware/DBPTK/`.
 
 .. image:: img/dbptk_save_location.png
