@@ -94,9 +94,9 @@ The design and layout is based on Google's Material_ Design. This has been imple
 .. _Prism: https://github.com/PrismLibrary/Prism
 .. _Material: https://material.google.com/
 
-Setup
------
-This is the setup project for creating installation binaries. The `Wix-toolset <http://wixtoolset.org/>`_ is needed to be able to use the Setup-project. 
+Arkivverket.Arkade.GUI.Installer
+--------------------------------
+This is the setup project for creating installation binaries. It is based on the `Wix-toolset <http://wixtoolset.org/>`_ which is included in the project as a NuGet package.
 
 Signing the installation file
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
