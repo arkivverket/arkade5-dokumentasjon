@@ -61,6 +61,8 @@ For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_lin
 
    <a href="https://database-preservation.com/#developer" target="_blank">Database Preservation Toolkit Developer (DBPTK Developer)</a>
 
+.. note:: Unngå tegnsettproblematikk ved kjøring av DBPTK-jar-fil og Siard-uttrekksfil på Windows ved å velge filbaner for Arkade-installasjon og Arkades prosesseringsområde uten tegn som f.eks. :code:`æøå`
+	
 
 Kjør programmet
 ~~~~~~~~~~~~~~~
