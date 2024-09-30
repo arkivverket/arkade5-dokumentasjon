@@ -202,6 +202,7 @@ For at Arkade skal støtte bruk av verktøyet |database_preservation_toolkit_lin
 
 .. image:: img/dbptk_save_location.png
 
+.. note:: Unngå tegnsettproblematikk ved kjøring av DBPTK-jar-fil og Siard-uttrekksfil på Windows ved å velge filbaner for Arkade-installasjon og Arkades prosesseringsområde uten tegn som f.eks. :code:`æøå`
 
 Aktiver støtte for validering av PDF/A 
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
